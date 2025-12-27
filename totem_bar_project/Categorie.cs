@@ -32,10 +32,7 @@ namespace totem_bar_project
         { 
             return allergeni; 
         }
-        public void AggiungiAllergene(string allergene)
-        { 
-            allergeni.Add(allergene); 
-        }
+
         public string GetNome()
         {
             return nome;
@@ -78,9 +75,25 @@ namespace totem_bar_project
         {
             this.prezzo = prezzo;
         }
+
+        public void AggiungiAllergene(string allergene)
+        {
+            if (!allergeni.Contains(allergene))
+                allergeni.Add(allergene);
+        }
+        public bool ContieneAllergene(string allergene)
+        {
+            return allergeni.Contains(allergene);
+        }
+
+        public void CambiaCategoria(TipoCategoria nuovaCategoria)
+        {
+            categoria = nuovaCategoria;
+        }
         public int CalcolaPrezzoConIva()
         {
             return prezzo + (prezzo * Iva / 100);
         }
+
     }
 }
