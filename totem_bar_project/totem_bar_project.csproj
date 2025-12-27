@@ -7,4 +7,24 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="calde.png" />
+    <None Remove="dolci.png" />
+    <None Remove="fredde.png" />
+    <None Remove="panino.jpg" />
+    <None Remove="panino.png" />
+    <None Remove="snack.png" />
+    <None Remove="snacks.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="calde.png" />
+    <Resource Include="dolci.png" />
+    <Resource Include="fredde.png" />
+    <Resource Include="panino.jpg" />
+    <Resource Include="panino.png" />
+    <Resource Include="snack.png" />
+    <Resource Include="snacks.png" />
+  </ItemGroup>
+
 </Project>
