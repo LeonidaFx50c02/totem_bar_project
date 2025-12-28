@@ -9,7 +9,7 @@
         Height="1280"
         Width="720">
 
-    <Grid x:Name="MenuGrande" Width="720" Height="1280">
+    <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14">
         <Grid.Resources>
             <Style TargetType="Button">
                 <Setter Property="Background" Value="#FFF0F0F0"/>
@@ -38,7 +38,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Button Grid.Row="0" Height="134" Width="122" Margin="0,0,0,12" FontWeight="Bold">
+            <Button x:Name="paniniCatButton" Grid.Row="0" Height="134" Width="122" Margin="10,-2,10,14" FontWeight="Bold" Click="paniniCatButton_Click">
                 <Grid>
                     <Image Source="/panino.png"
                            Height="70"
@@ -53,7 +53,7 @@
                                Margin="0,75,0,0"/>
                 </Grid>
             </Button>
-            <Button Grid.Row="1" Height="134" Width="122" Margin="0,0,0,12" FontWeight="Bold">
+            <Button x:Name="dolciCatButton" Grid.Row="1" Height="134" Width="122" Margin="10,0,10,12" FontWeight="Bold" Click="dolciCatButton_Click">
                 <Grid>
                     <Image Source="/dolci.png"
                            Height="70"
@@ -68,7 +68,7 @@
                                Margin="0,85,0,0"/>
                 </Grid>
             </Button>
-            <Button Grid.Row="2" Height="134" Width="122" Margin="0,0,0,12" FontWeight="Bold">
+            <Button x:Name="snackCatButton" Grid.Row="2" Height="134" Width="122" Margin="10,0,10,12" FontWeight="Bold" Click="snackCatButton_Click">
                 <Grid>
                     <Image Source="/snacks.png"
                            Height="70"
@@ -84,7 +84,7 @@
                                Margin="6,75,6,0"/>
                 </Grid>
             </Button>
-            <Button Grid.Row="3" Height="134" Width="122" Margin="0,0,0,12" FontWeight="Bold">
+            <Button x:Name="caldeCatButton" Grid.Row="3" Height="134" Width="122" Margin="10,0,10,12" FontWeight="Bold" Click="caldeCatButton_Click">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="51*"/>
@@ -106,7 +106,7 @@
                                Grid.ColumnSpan="2"/>
                 </Grid>
             </Button>
-            <Button Grid.Row="4" Height="134" Width="122" FontWeight="Bold">
+            <Button x:Name="freddeCatButton" Grid.Row="4" Height="134" Width="122" FontWeight="Bold" Margin="10,0,10,0" Click="freddeCatButton_Click">
                 <Grid>
                     <Image Source="/fredde.png"
                            Height="70"
@@ -122,11 +122,189 @@
                                Margin="6,75,6,0"/>
                 </Grid>
             </Button>
-
         </Grid>
         <Grid x:Name="ordine" Margin="10,882,10,38"/>
-        <Grid x:Name="prodotti" Margin="157,146,10,403"/>
-
+        <Grid x:Name="prodottiPanini" Margin="157,146,10,403">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0"
+            Width="122" Height="134" Margin="45,0,101,12" FontWeight="Bold" Grid.ColumnSpan="2">
+                <Grid>
+                    <Image Source="/panino.png"
+                   Height="70"
+                   Stretch="Uniform"
+                   VerticalAlignment="Top"
+                   Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto1"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       TextAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="1"
+            Width="122" Height="134" Margin="100,1,2559,11" FontWeight="Bold" Grid.ColumnSpan="2">
+                <Grid>
+                    <Image Source="/panino.png"
+                   Height="70"
+                   Stretch="Uniform"
+                   VerticalAlignment="Top"
+                   Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto2"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       TextAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="2"
+            Width="122" Height="134" Margin="79,0,2366,12" FontWeight="Bold">
+                <Grid>
+                    <Image Source="/panino.png"
+                   Height="70"
+                   Stretch="Uniform"
+                   VerticalAlignment="Top"
+                   Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto3"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       TextAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="0"
+            Width="122" Height="134" Margin="54,0,109,12" FontWeight="Bold" Grid.ColumnSpan="2">
+                <Grid>
+                    <Image Source="/panino.png"
+                   Height="70"
+                   Stretch="Uniform"
+                   VerticalAlignment="Top"
+                   Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto4"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       TextAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Column="1"
+            Width="122" Height="134" Margin="100,0,2560,12" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Row="1">
+                <Grid>
+                    <Image Source="/panino.png"
+                   Height="70"
+                   Stretch="Uniform"
+                   VerticalAlignment="Top"
+                   Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto5"
+                       FontSize="18"
+                       FontWeight="Bold"
+                       TextAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+        </Grid>
+        <Grid x:Name="prodottiDolci" Margin="157,146,10,403" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0"
+    Width="122" Height="134" Margin="45,0,101,12" FontWeight="Bold" Grid.ColumnSpan="2">
+                <Grid>
+                    <Image Source="/dolci.png"
+           Height="70"
+           Stretch="Uniform"
+           VerticalAlignment="Top"
+           Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto1"
+               FontSize="18"
+               FontWeight="Bold"
+               TextAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="1"
+            Width="122" Height="134" Margin="100,1,2559,11" FontWeight="Bold" Grid.ColumnSpan="2">
+                <Grid>
+                    <Image Source="/dolci.png"
+           Height="70"
+           Stretch="Uniform"
+           VerticalAlignment="Top"
+           Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto2"
+               FontSize="18"
+               FontWeight="Bold"
+               TextAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="2"
+    Width="122" Height="134" Margin="79,0,2366,12" FontWeight="Bold">
+                <Grid>
+                    <Image Source="/dolci.png"
+           Height="70"
+           Stretch="Uniform"
+           VerticalAlignment="Top"
+           Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto3"
+               FontSize="18"
+               FontWeight="Bold"
+               TextAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="0"
+    Width="122" Height="134" Margin="54,0,109,12" FontWeight="Bold" Grid.ColumnSpan="2">
+                <Grid>
+                    <Image Source="/dolci.png"
+           Height="70"
+           Stretch="Uniform"
+           VerticalAlignment="Top"
+           Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto4"
+               FontSize="18"
+               FontWeight="Bold"
+               TextAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+            <Button Grid.Column="1"
+    Width="122" Height="134" Margin="100,0,2560,12" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Row="1">
+                <Grid>
+                    <Image Source="/dolci.png"
+           Height="70"
+           Stretch="Uniform"
+           VerticalAlignment="Top"
+           Margin="0,16,0,0"/>
+                    <TextBlock Text="prodotto5"
+               FontSize="18"
+               FontWeight="Bold"
+               TextAlignment="Center"
+               VerticalAlignment="Top"
+               Margin="0,75,0,0"/>
+                </Grid>
+            </Button>
+        </Grid>
     </Grid>
-
 </Window>

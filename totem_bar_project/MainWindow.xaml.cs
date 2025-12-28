@@ -24,5 +24,32 @@ namespace totem_bar_project
         {
             InitializeComponent();
         }
+
+        private void paniniCatButton_Click(object sender, RoutedEventArgs e)
+        {
+            prodottiDolci.Visibility = Visibility.Collapsed;
+            prodottiPanini.Visibility = Visibility.Visible;
+        }
+
+        private void dolciCatButton_Click(object sender, RoutedEventArgs e)
+        {
+            prodottiDolci.Visibility = Visibility.Visible;
+            prodottiPanini.Visibility = Visibility.Collapsed;
+        }
+
+        private void snackCatButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void caldeCatButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void freddeCatButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
