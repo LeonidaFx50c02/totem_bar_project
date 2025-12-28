@@ -9,22 +9,32 @@
 
   <ItemGroup>
     <None Remove="calde.png" />
+    <None Remove="Caprese.png" />
     <None Remove="dolci.png" />
     <None Remove="fredde.png" />
     <None Remove="panino.jpg" />
     <None Remove="panino.png" />
+    <None Remove="Prosciutto.png" />
     <None Remove="snack.png" />
     <None Remove="snacks.png" />
+    <None Remove="Tramezzino.png" />
+    <None Remove="Verdure.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="calde.png" />
+    <Resource Include="Caprese.png" />
     <Resource Include="dolci.png" />
     <Resource Include="fredde.png" />
     <Resource Include="panino.jpg" />
     <Resource Include="panino.png" />
+    <Resource Include="Prosciutto.png" />
     <Resource Include="snack.png" />
     <Resource Include="snacks.png" />
+    <Resource Include="Tramezzino.png" />
+    <Resource Include="Verdure.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

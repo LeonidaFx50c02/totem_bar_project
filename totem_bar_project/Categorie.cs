@@ -75,7 +75,6 @@ namespace totem_bar_project
         {
             this.prezzo = prezzo;
         }
-
         public void AggiungiAllergene(string allergene)
         {
             if (!allergeni.Contains(allergene))
@@ -85,7 +84,6 @@ namespace totem_bar_project
         {
             return allergeni.Contains(allergene);
         }
-
         public void CambiaCategoria(TipoCategoria nuovaCategoria)
         {
             categoria = nuovaCategoria;
