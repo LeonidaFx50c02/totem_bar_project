@@ -29,12 +29,14 @@ namespace totem_bar_project
         {
             prodottiDolci.Visibility = Visibility.Collapsed;
             prodottiPanini.Visibility = Visibility.Visible;
+            prodottiSnacks.Visibility = Visibility.Collapsed;
         }
 
         private void dolciCatButton_Click(object sender, RoutedEventArgs e)
         {
             prodottiDolci.Visibility = Visibility.Visible;
             prodottiPanini.Visibility = Visibility.Collapsed;
+            prodottiSnacks.Visibility = Visibility.Collapsed;
         }
 
         private void snackCatButton_Click(object sender, RoutedEventArgs e)

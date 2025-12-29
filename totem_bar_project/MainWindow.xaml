@@ -302,8 +302,7 @@
                 </Grid>
             </Button>
         </Grid>
-    </Grid>
-    <Grid x:Name="prodottiSnacks" Margin="157,146,10,403" Visibility="Collapsed">
+        <Grid x:Name="prodottiSnacks" Margin="157,146,10,403" Visibility="Collapsed">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -398,5 +397,6 @@
                 Margin="0,75,0,0"/>
             </Grid>
         </Button>
+        </Grid>
     </Grid>
 </Window>
