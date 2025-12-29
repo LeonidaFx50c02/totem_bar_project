@@ -30,6 +30,8 @@ namespace totem_bar_project
             prodottiDolci.Visibility = Visibility.Collapsed;
             prodottiPanini.Visibility = Visibility.Visible;
             prodottiSnacks.Visibility = Visibility.Collapsed;
+            prodottiCalde.Visibility = Visibility.Collapsed;
+            prodottiFredde.Visibility = Visibility.Collapsed;
         }
 
         private void dolciCatButton_Click(object sender, RoutedEventArgs e)
@@ -37,6 +39,8 @@ namespace totem_bar_project
             prodottiDolci.Visibility = Visibility.Visible;
             prodottiPanini.Visibility = Visibility.Collapsed;
             prodottiSnacks.Visibility = Visibility.Collapsed;
+            prodottiCalde.Visibility = Visibility.Collapsed;
+            prodottiFredde.Visibility = Visibility.Collapsed;
         }
 
         private void snackCatButton_Click(object sender, RoutedEventArgs e)
@@ -44,18 +48,26 @@ namespace totem_bar_project
             prodottiSnacks.Visibility = Visibility.Visible;
             prodottiPanini.Visibility = Visibility.Collapsed;
             prodottiDolci.Visibility = Visibility.Collapsed;
-            //prodottiCalde, prodottiFredde, ecc.
-            //prodottiCalde.Visibility = Visibility.Collapsed;
+            prodottiFredde.Visibility = Visibility.Collapsed;
+            prodottiCalde.Visibility = Visibility.Collapsed;
         }
 
         private void caldeCatButton_Click(object sender, RoutedEventArgs e)
         {
-
+            prodottiSnacks.Visibility = Visibility.Collapsed;
+            prodottiPanini.Visibility = Visibility.Collapsed;
+            prodottiDolci.Visibility = Visibility.Collapsed;
+            prodottiFredde.Visibility = Visibility.Collapsed;
+            prodottiCalde.Visibility = Visibility.Visible;
         }
 
         private void freddeCatButton_Click(object sender, RoutedEventArgs e)
         {
-
+            prodottiSnacks.Visibility = Visibility.Collapsed;
+            prodottiPanini.Visibility = Visibility.Collapsed;
+            prodottiDolci.Visibility = Visibility.Collapsed;
+            prodottiFredde.Visibility = Visibility.Visible;
+            prodottiCalde.Visibility = Visibility.Collapsed;
         }
     }
 }
