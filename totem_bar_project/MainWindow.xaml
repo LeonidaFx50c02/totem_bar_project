@@ -157,7 +157,20 @@
                     </Grid>
                 </Button>
             </Grid>
-            <Grid x:Name="ordine" Margin="10,882,10,38"/>
+            <Border BorderBrush="Black"
+        BorderThickness="3"
+        CornerRadius="20"
+        Margin="10,882,10,38">
+
+    <Grid x:Name="ordine" Margin="10">
+        <TextBlock Text="Dettagli ordine:"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="10,0,464,292"/>
+    </Grid>
+
+</Border>
+
             <Grid x:Name="prodottiPanini" Margin="157,146,10,403" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -484,6 +497,21 @@
                     </Grid>
                 </Button>
             </Grid>
+        </Grid>
+        <Grid x:Name="schermataOrdine" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
+            <TextBlock Text="Riepilogo Ordine" FontSize="30" FontWeight="Bold"
+           HorizontalAlignment="Center" Margin="0,20,0,1217"/>
+
+            <StackPanel x:Name="listaOrdine" Margin="20,100,20,137">
+            </StackPanel>
+
+            <TextBlock x:Name="totaleOrdine" Text="Totale: €0" FontSize="24" FontWeight="Bold"
+           HorizontalAlignment="Right" Margin="0,0,20,100" VerticalAlignment="Bottom"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,40">
+                <Button x:Name="ConfermaOrdine" Content="Procedi al Pagamento" Width="200" Height="60" Click="Pagamento_Click"/>
+                <Button x:Name="AnnullaOrdine" Content="Torna indietro" Width="200" Height="60" Click="back_Click"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

@@ -69,5 +69,16 @@ namespace totem_bar_project
             prodottiFredde.Visibility = Visibility.Visible;
             prodottiCalde.Visibility = Visibility.Collapsed;
         }
+
+        private void Pagamento_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            schermataOrdine.Visibility = Visibility.Collapsed;
+            MenuGrande.Visibility = Visibility.Visible;
+        }
     }
 }
