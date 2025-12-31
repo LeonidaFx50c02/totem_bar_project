@@ -164,16 +164,17 @@
 
                 <Grid x:Name="ordine" Margin="10">
                     <TextBlock Text="Dettagli ordine:"
-                   FontSize="24"
+                   FontSize="28"
                    FontWeight="Bold"
                    Margin="10,0,464,292"/>
+                    <TextBlock x:Name="ordineElencoLista" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="277" Width="498" FontSize="24" FontWeight="Bold"/>
                 </Grid>
 
             </Border>
 
             <!--PANINI-->
 
-            <Grid x:Name="prodottiPanini" Margin="157,135,10,400" Visibility="Collapsed">
+            <Grid x:Name="prodottiPanini" Margin="157,135,10,400">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="139*"/>
                     <ColumnDefinition Width="414*"/>
@@ -202,7 +203,7 @@
                 </Button>
                 <Button x:Name="Caprese" Grid.Row="0" Grid.Column="1"
                         Width="122" Height="134"
-                        Margin="282,24,10,587" FontWeight="Bold" Click="Button_Click">
+                        Margin="282,24,10,587" FontWeight="Bold" Click="Caprese_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="17*"/>
@@ -268,7 +269,7 @@
 
             <!--PRODOTTI DOLCI-->
 
-            <Grid x:Name="prodottiDolci" Margin="157,150,10,403" Visibility="Visible">
+            <Grid x:Name="prodottiDolci" Margin="157,150,10,403" Visibility="Collapsed">
 
                 <!-- Diverse tipologie di dolci -->
 

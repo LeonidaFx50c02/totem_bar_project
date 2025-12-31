@@ -20,10 +20,42 @@ namespace totem_bar_project
     /// </summary>
     public partial class MainWindow : Window
     {
+        string carrello = "";
         public MainWindow()
         {
             InitializeComponent();
+            inizializzaProdotti();
         }
+
+        private void inizializzaProdotti()
+        {
+
+            Categorie cheesecake = new Categorie("Cheesecake", 4, TipoCategoria.Dolci, "Cheesecake", new List<Allergeni> { Allergeni.latte, Allergeni.uova }, new List<TipoIngredienti> { });
+            Categorie tiramisu = new Categorie("Tiramisù", 4, TipoCategoria.Dolci, "Tiramisù", new List<Allergeni> { Allergeni.latte, Allergeni.uova }, new List<TipoIngredienti> { });
+            Categorie gelato = new Categorie("Gelato", 3, TipoCategoria.Dolci, "Gelato", new List<Allergeni> { Allergeni.latte }, new List<TipoIngredienti> { });
+            Categorie macedonia = new Categorie("Macedonia", 3, TipoCategoria.Dolci, "Macedonia di frutta", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie dolce5 = new Categorie("Dolce del giorno", 3, TipoCategoria.Dolci, "Dolce speciale", new List<Allergeni> { }, new List<TipoIngredienti> { });
+
+            Categorie patatine = new Categorie("Patatine", 2, TipoCategoria.Snack, "Patatine fritte", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie popcorn = new Categorie("Popcorn", 2, TipoCategoria.Snack, "Popcorn salati", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie crackers = new Categorie("Crackers", 2, TipoCategoria.Snack, "Crackers", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { });
+            Categorie taralli = new Categorie("Taralli", 2, TipoCategoria.Snack, "Taralli", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { });
+            Categorie snackChoco = new Categorie("Snack Choco", 3, TipoCategoria.Snack, "Snack al cioccolato", new List<Allergeni> { Allergeni.latte }, new List<TipoIngredienti> { });
+
+            Categorie cioccolata = new Categorie("Cioccolata", 3, TipoCategoria.BevandeCalde, "Cioccolata calda", new List<Allergeni> { Allergeni.latte }, new List<TipoIngredienti> { });
+            Categorie caffe = new Categorie("Caffè", 1, TipoCategoria.BevandeCalde, "Caffè espresso", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie balsamo = new Categorie("Balsamo", 2, TipoCategoria.BevandeCalde, "Bevanda calda", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie cappuccino = new Categorie("Cappuccino", 2, TipoCategoria.BevandeCalde, "Cappuccino", new List<Allergeni> { Allergeni.latte }, new List<TipoIngredienti> { });
+            Categorie theCaldo = new Categorie("Thè", 2, TipoCategoria.BevandeCalde, "Thè caldo", new List<Allergeni> { }, new List<TipoIngredienti> { });
+
+            Categorie cocaCola = new Categorie("Coca Cola", 2, TipoCategoria.BevandeFredde, "Coca Cola", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie teFreddo = new Categorie("Tè freddo", 2, TipoCategoria.BevandeFredde, "Tè freddo", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie fanta = new Categorie("Fanta", 2, TipoCategoria.BevandeFredde, "Fanta", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie sprite = new Categorie("Sprite", 2, TipoCategoria.BevandeFredde, "Sprite", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie redBull = new Categorie("Red Bull", 3, TipoCategoria.BevandeFredde, "Energy drink", new List<Allergeni> { }, new List<TipoIngredienti> { });
+            Categorie monster = new Categorie("Monster", 3, TipoCategoria.BevandeFredde, "Energy drink", new List<Allergeni> { }, new List<TipoIngredienti> { });
+        }
+
 
         private void paniniCatButton_Click(object sender, RoutedEventArgs e)
         {
@@ -81,9 +113,10 @@ namespace totem_bar_project
             MenuGrande.Visibility = Visibility.Visible;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Caprese_Click(object sender, RoutedEventArgs e)
         {
             GridCaprese.Visibility = Visibility.Visible;
+            Categorie caprese = new Categorie("Caprese", 4, TipoCategoria.Panini, "Panino caprese", new List<Allergeni> { Allergeni.glutine, Allergeni.latte }, new List<TipoIngredienti> { TipoIngredienti.Insalata, TipoIngredienti.Pomodoro, TipoIngredienti.Pane, TipoIngredienti.Formaggio });
 
         }
 
@@ -95,6 +128,8 @@ namespace totem_bar_project
         private void Hamburger1_Click(object sender, RoutedEventArgs e)
         {
             GridHamburger.Visibility = Visibility.Visible;
+            Categorie hamburger = new Categorie("Hamburger", 5, TipoCategoria.Panini, "Panino con hamburger", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { TipoIngredienti.Insalata, TipoIngredienti.Pomodoro, TipoIngredienti.Pane, TipoIngredienti.Carne, TipoIngredienti.Formaggio });
+            carrello += hamburger.GetNome();
 
         }
         private void ChiudiHamburger_Click(object sender, RoutedEventArgs e)
@@ -109,6 +144,7 @@ namespace totem_bar_project
         private void Verdure_Click(object sender, RoutedEventArgs e)
         {
             GridVerdure.Visibility = Visibility.Visible;
+            Categorie verdure = new Categorie("Verdure", 4, TipoCategoria.Panini, "Panino alle verdure", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { TipoIngredienti.Pane, TipoIngredienti.Melanzane, TipoIngredienti.Zucchine, TipoIngredienti.Insalata});
 
         }
         private void ChiudiVerdure_Click(object sender, RoutedEventArgs e)
@@ -119,6 +155,7 @@ namespace totem_bar_project
         private void Prosciutto_Click(object sender, RoutedEventArgs e)
         {
             GridProsciutto.Visibility = Visibility.Visible;
+            Categorie prosciutto = new Categorie("Prosciutto", 4, TipoCategoria.Panini, "Panino al prosciutto", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { TipoIngredienti.Pane, TipoIngredienti.Formaggio, TipoIngredienti.Prosciutto });
         }
 
         private void ChiudiProsciutto_Click(object sender, RoutedEventArgs e)
@@ -129,6 +166,7 @@ namespace totem_bar_project
         private void Tramezzino_Click(object sender, RoutedEventArgs e)
         {
             GridTramezzino.Visibility = Visibility.Visible;
+            Categorie tramezzino = new Categorie("Tramezzino", 3, TipoCategoria.Panini, "Tramezzino classico", new List<Allergeni> { Allergeni.glutine, Allergeni.uova }, new List<TipoIngredienti> { TipoIngredienti.Insalata, TipoIngredienti.Pomodoro, TipoIngredienti.Pane });
         }
 
         private void ChiudiTramezzino_Click(object sender, RoutedEventArgs e)

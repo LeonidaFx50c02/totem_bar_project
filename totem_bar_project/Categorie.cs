@@ -7,29 +7,28 @@ using System.Threading.Tasks;
 namespace totem_bar_project
 {
 
-    public enum TipoCategoria { Bevande, Panini, Snack, BevandeCalde };
+    public enum TipoCategoria { BevandeFredde, Dolci, Panini, Snack, BevandeCalde };
     public enum TipoIngredienti { Pane, Carne, Insalata, Formaggio, Pomodoro, Prosciutto, Zucchine, Bufala, Pesto, Melanzane };
+    public enum Allergeni { glutine, crostacei, uova, pesce, arachidi, soia, latte, guscio, sedano, senape, sesamo, solfiti, molluschi };
     internal class Categorie
     {
         private string nome;
         private int prezzo;
         private TipoCategoria categoria;
-        private TipoIngredienti ingrediente;
+        private List<TipoIngredienti> ingredienti = new List<TipoIngredienti>();
         private string descrizione;
-        private int Iva;
-        private List<string> allergeni = new List<string>();
+        private List<Allergeni> allergeni = new List<Allergeni>();
 
-        public Categorie(string nome, int prezzo, TipoCategoria categoria, string descrizione, int Iva, List<string> allergeni, TipoIngredienti ingrediente)
+        public Categorie(string nome, int prezzo, TipoCategoria categoria, string descrizione, List<Allergeni> allergeni, List<TipoIngredienti> ingredienti)
         {
             this.nome = nome;
             this.prezzo = prezzo;
             this.categoria = categoria;
             this.descrizione = descrizione;
-            this.Iva = Iva;
             this.allergeni = allergeni;
-            this.ingrediente = ingrediente;
+            this.ingredienti = ingredienti;
         }
-        public List<string> GetAllergeni()
+        public List<Allergeni> GetAllergeni()
         { 
             return allergeni; 
         }
@@ -37,10 +36,6 @@ namespace totem_bar_project
         public string GetNome()
         {
             return nome;
-        }
-        public int GetIva()
-        {
-            return Iva;
         }
         public string GetDescrizione()
         {
@@ -51,22 +46,14 @@ namespace totem_bar_project
             this.descrizione = descrizione;
         }
 
-        public void SetIva(int iva)
-        {
-            Iva = iva;
-        }
         public int GetPrezzo()
         {
             return prezzo;
         }
-
-        public void SetIngrediente(TipoIngredienti ingrediente)
-        {
-            this.ingrediente = ingrediente;
-        }
        public TipoIngredienti GetIngrediente()
        {
-            return ingrediente;
+            //da vedere!!
+            return 0;
        }
         public void SetCategoria(TipoCategoria categoria)
         { 
@@ -85,22 +72,13 @@ namespace totem_bar_project
         {
             this.prezzo = prezzo;
         }
-        public void AggiungiAllergene(string allergene)
-        {
-            if (!allergeni.Contains(allergene))
-                allergeni.Add(allergene);
-        }
-        public bool ContieneAllergene(string allergene)
-        {
-            return allergeni.Contains(allergene);
-        }
         public void CambiaCategoria(TipoCategoria nuovaCategoria)
         {
             categoria = nuovaCategoria;
         }
         public int CalcolaPrezzoConIva()
         {
-            return prezzo + (prezzo * Iva / 100);
+            return prezzo + (prezzo * 10 / 100);
         }
 
     }
