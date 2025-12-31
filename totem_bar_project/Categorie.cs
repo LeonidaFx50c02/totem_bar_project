@@ -8,16 +8,18 @@ namespace totem_bar_project
 {
 
     public enum TipoCategoria { Bevande, Panini, Snack, BevandeCalde };
+    public enum TipoIngredienti { Pane, Carne, Insalata, Formaggio, Pomodoro, Prosciutto, Zucchine, Bufala, Pesto, Melanzane };
     internal class Categorie
     {
         private string nome;
         private int prezzo;
         private TipoCategoria categoria;
+        private TipoIngredienti ingrediente;
         private string descrizione;
         private int Iva;
         private List<string> allergeni = new List<string>();
 
-        public Categorie(string nome, int prezzo, TipoCategoria categoria, string descrizione, int Iva, List<string> allergeni)
+        public Categorie(string nome, int prezzo, TipoCategoria categoria, string descrizione, int Iva, List<string> allergeni, TipoIngredienti ingrediente)
         {
             this.nome = nome;
             this.prezzo = prezzo;
@@ -25,9 +27,8 @@ namespace totem_bar_project
             this.descrizione = descrizione;
             this.Iva = Iva;
             this.allergeni = allergeni;
+            this.ingrediente = ingrediente;
         }
-
-
         public List<string> GetAllergeni()
         { 
             return allergeni; 
@@ -58,6 +59,15 @@ namespace totem_bar_project
         {
             return prezzo;
         }
+
+        public void SetIngrediente(TipoIngredienti ingrediente)
+        {
+            this.ingrediente = ingrediente;
+        }
+       public TipoIngredienti GetIngrediente()
+       {
+            return ingrediente;
+       }
         public void SetCategoria(TipoCategoria categoria)
         { 
             this.categoria = categoria; 

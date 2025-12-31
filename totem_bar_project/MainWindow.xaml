@@ -90,10 +90,10 @@
                 <Button x:Name="dolciCatButton" Height="134" Width="122" Margin="10,289,10,444" FontWeight="Bold" Click="dolciCatButton_Click" Grid.ColumnSpan="2">
                     <Grid>
                         <Image Source="/dolci.png"
-                           Height="70"
-                           Stretch="Uniform"
-                           VerticalAlignment="Top"
-                           Margin="0,10,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,10,0,0"/>
                         <TextBlock Text="Dolci"
                                FontSize="22"
                                FontWeight="Bold"
@@ -125,35 +125,35 @@
                             <ColumnDefinition Width="41*"/>
                         </Grid.ColumnDefinitions>
                         <Image Source="/calde.png"
-                           Height="70"
-                           Stretch="Uniform"
-                           VerticalAlignment="Top"
-                           Margin="-1,-48,1,0"
-                           Grid.ColumnSpan="2"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="-1,-48,1,0"
+                        Grid.ColumnSpan="2"/>
                         <TextBlock Text="Bevande calde"
-                               FontSize="20"
-                               FontWeight="Bold"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"
-                               VerticalAlignment="Bottom"
-                               Margin="5,0,7,-53"
-                               Grid.ColumnSpan="2"/>
+                        FontSize="20"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        TextAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Margin="5,0,7,-53"
+                        Grid.ColumnSpan="2"/>
                     </Grid>
                 </Button>
                 <Button x:Name="freddeCatButton" Height="134" Width="122" FontWeight="Bold" Margin="10,567,10,166" Click="freddeCatButton_Click" Grid.ColumnSpan="2">
                     <Grid>
                         <Image Source="/fredde.png"
-                           Height="70"
-                           Stretch="Uniform"
-                           VerticalAlignment="Top"
-                           Margin="0,10,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,10,0,0"/>
                         <TextBlock Text="Bevande fredde"
-                               FontSize="20"
-                               FontWeight="Bold"
-                               TextWrapping="Wrap"
-                               TextAlignment="Center"
-                               VerticalAlignment="Top"
-                               Margin="6,75,6,0"/>
+                        FontSize="20"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="6,75,6,0"/>
                     </Grid>
                 </Button>
             </Grid>
@@ -173,175 +173,177 @@
 
             <!--PANINI-->
 
-            <Grid x:Name="prodottiPanini" Margin="157,141,10,403" Visibility="Visible">
+            <Grid x:Name="prodottiPanini" Margin="157,135,10,400" Visibility="Collapsed">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="139*"/>
                     <ColumnDefinition Width="414*"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- Prima riga di panini -->
-
-
                 <!--DIVERSE TIPOLOGIE DI PANINI-->
 
-                <Button Grid.Row="0"
-            Width="122" Height="134" Margin="77,20,215,582" FontWeight="Bold" Grid.Column="1">
+                <Button x:Name="Hamburger1" Grid.Row="0"
+                    Width="122" Height="134" Margin="77,23,215,585" FontWeight="Bold" Grid.Column="1" Click="Hamburger1_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="95*"/>
                             <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
                         <Image Source="/Hamburger.png"
-                   Height="95"
-                   Stretch="Uniform"
-                   VerticalAlignment="Top" Margin="-41,-8,-41,0" Grid.ColumnSpan="2"/>
+                        Height="95"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top" Margin="-41,-8,-41,0" Grid.ColumnSpan="2"/>
                         <TextBlock Text="Hamburger"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       TextAlignment="Center"
-                       VerticalAlignment="Top"
-                       Margin="0,75,0,0" Grid.ColumnSpan="2"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Button>
-                <Button Grid.Row="0" Height="134" Margin="284,20,10,582" FontWeight="Bold" Grid.Column="1">
+                <Button x:Name="Caprese" Grid.Row="0" Grid.Column="1"
+                        Width="122" Height="134"
+                        Margin="282,24,10,587" FontWeight="Bold" Click="Button_Click">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="17*"/>
+                            <ColumnDefinition Width="84*"/>
+                        </Grid.ColumnDefinitions>
                         <Image Source="/Caprese.png"
-                   Height="101"
-                   Stretch="Uniform"
-                   VerticalAlignment="Top"
-                   Margin="0,-12,0,0"/>
+                        Height="101"
+                        Stretch="Uniform"
+                        VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+
                         <TextBlock Text="Caprese"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       TextAlignment="Center"
-                       VerticalAlignment="Top"
-                       Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Bottom" Grid.ColumnSpan="2"/>
                     </Grid>
                 </Button>
-                <Button Grid.Row="0" Height="134" Margin="77,159,215,443" FontWeight="Bold" Grid.Column="1">
+
+                <Button x:Name="Verdure" Grid.Row="0" Height="134" Width="122" Margin="77,159,215,443" FontWeight="Bold" Grid.Column="1" Click="Verdure_Click">
                     <Grid>
                         <Image Source="/Verdure.png"
-                   Height="76"
-                   Stretch="Uniform"
-                   VerticalAlignment="Top"/>
+                        Height="76"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"/>
                         <TextBlock Text="Verdure"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       TextAlignment="Center"
-                       VerticalAlignment="Top"
-                       Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button Grid.Column="0"
-            Width="122" Height="134" Margin="10,20,7,582" FontWeight="Bold">
+                <Button x:Name="Tramezzino" Grid.Column="0" Height="134" Width="122" Margin="10,23,7,585" FontWeight="Bold" Click="Tramezzino_Click">
                     <Grid>
                         <Image Source="/Tramezzino.png"
-                   Height="76"
-                   Stretch="Uniform"
-                   VerticalAlignment="Top" Margin="0,-1,0,0"/>
+                        Height="76"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top" Margin="0,-1,0,0"/>
                         <TextBlock Text="Tramezzino"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       TextAlignment="Center"
-                       VerticalAlignment="Top"
-                       Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button Height="134" Width="122" Margin="10,159,7,443" FontWeight="Bold">
+                <Button x:Name="Prosciutto" Height="134" Width="122" Margin="10,159,7,443" FontWeight="Bold" Click="Prosciutto_Click">
                     <Grid>
                         <Image Source="/Prosciutto.png"
-                   Height="103"
-                   Stretch="Uniform"
-                   VerticalAlignment="Top"
-                   Margin="-17,-16,-17,0"/>
+                        Height="103"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="-17,-16,-17,0"/>
                         <TextBlock Text="Prosciutto"
-                       FontSize="18"
-                       FontWeight="Bold"
-                       TextAlignment="Center"
-                       VerticalAlignment="Top"
-                       Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
             </Grid>
 
             <!--PRODOTTI DOLCI-->
 
-            <Grid x:Name="prodottiDolci" Margin="157,150,10,403" Visibility="Collapsed">
+            <Grid x:Name="prodottiDolci" Margin="157,150,10,403" Visibility="Visible">
 
                 <!-- Diverse tipologie di dolci -->
 
-                <Button Grid.Row="0" Grid.Column="0"
-                Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold">
+                <Button x:Name="Cheesecake" Grid.Row="0" Grid.Column="0"
+                Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold" Click="Cheesecake_Click">
                     <Grid>
                         <Image Source="/dolci.png"
-           Height="70"
-           Stretch="Uniform"
-           VerticalAlignment="Top"
-           Margin="0,16,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
                         <TextBlock Text="Cheesecake"
-               FontSize="18"
-               FontWeight="Bold"
-               TextAlignment="Center"
-               VerticalAlignment="Top"
-               Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button Grid.Row="0"
-            Width="122" Height="134" Margin="10,149,421,444" FontWeight="Bold">
+                <Button x:Name="Tiramisu" Grid.Row="0"
+                    Width="122" Height="134" Margin="10,149,421,444" FontWeight="Bold" Click="Tiramisu_Click">
                     <Grid>
                         <Image Source="/dolci.png"
-           Height="70"
-           Stretch="Uniform"
-           VerticalAlignment="Top"
-           Margin="0,16,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
                         <TextBlock Text="Tiramisù"
-               FontSize="18"
-               FontWeight="Bold"
-               TextAlignment="Center"
-               VerticalAlignment="Top"
-               Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button Grid.Row="0" Height="134" Margin="216,149,215,444" FontWeight="Bold">
+                <Button x:Name="Babba" Grid.Row="0" Height="134" Margin="216,149,215,444" FontWeight="Bold" Click="Babba_Click">
                     <Grid>
                         <Image Source="/dolci.png"
-           Height="70"
-           Stretch="Uniform"
-           VerticalAlignment="Top"
-           Margin="0,16,0,0"/>
-                        <TextBlock Text="Gelato"
-               FontSize="18"
-               FontWeight="Bold"
-               TextAlignment="Center"
-               VerticalAlignment="Top"
-               Margin="0,75,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
+                        <TextBlock Text="Babbà"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button Grid.Column="0"
-                Width="122" Height="134" Margin="10,10,421,583" FontWeight="Bold">
+                <Button x:Name="Macedonia" Grid.Column="0"
+                Width="122" Height="134" Margin="10,10,421,583" FontWeight="Bold" Click="Macedonia_Click">
                     <Grid>
                         <Image Source="/dolci.png"
-           Height="70"
-           Stretch="Uniform"
-           VerticalAlignment="Top"
-           Margin="0,16,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
                         <TextBlock Text="Macedonia"
-               FontSize="18"
-               FontWeight="Bold"
-               TextAlignment="Center"
-               VerticalAlignment="Top"
-               Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button
-                Width="122" Height="134" Margin="421,10,10,583" FontWeight="Bold">
+                <Button x:Name="Ciambella"
+                Width="122" Height="134" Margin="421,10,10,583" FontWeight="Bold" Click="Ciambelle_Click">
                     <Grid>
                         <Image Source="/dolci.png"
                     Height="70"
                     Stretch="Uniform"
                     VerticalAlignment="Top"
                     Margin="0,16,0,0"/>
-                        <TextBlock Text="prodotto5"
+                        <TextBlock Text="Ciambella"
                     FontSize="18"
                     FontWeight="Bold"
                     TextAlignment="Center"
@@ -361,16 +363,16 @@
                 Width="122" Height="134" Margin="216,149,215,444" FontWeight="Bold">
                     <Grid>
                         <Image Source="/snacks.png"
-                 Height="70"
-                 Stretch="Uniform"
-                 VerticalAlignment="Top"
-                 Margin="0,16,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
                         <TextBlock Text="Patatine"
-                 FontSize="18"
-                 FontWeight="Bold"
-                 TextAlignment="Center"
-                 VerticalAlignment="Top"
-                 Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
 
@@ -378,16 +380,16 @@
             Width="122" Height="134" Margin="10,10,421,583" FontWeight="Bold">
                     <Grid>
                         <Image Source="/snacks.png"
-                Height="70"
-                Stretch="Uniform"
-                VerticalAlignment="Top"
-                Margin="0,16,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
                         <TextBlock Text="Popcorn"
-                FontSize="18"
-                FontWeight="Bold"
-                TextAlignment="Center"
-                VerticalAlignment="Top"
-                Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
 
@@ -395,16 +397,16 @@
             Width="122" Height="134" Margin="10,149,421,444" FontWeight="Bold">
                     <Grid>
                         <Image Source="/snacks.png"
-                Height="70"
-                Stretch="Uniform"
-                VerticalAlignment="Top"
-                Margin="0,16,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
                         <TextBlock Text="Crackers"
-                FontSize="18"
-                FontWeight="Bold"
-                TextAlignment="Center"
-                VerticalAlignment="Top"
-                Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
 
@@ -412,33 +414,33 @@
             Width="122" Height="134" Margin="421,10,10,583" FontWeight="Bold">
                     <Grid>
                         <Image Source="/snacks.png"
-                Height="70"
-                Stretch="Uniform"
-                VerticalAlignment="Top"
-                Margin="0,16,0,0"/>
+                        Height="70"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="0,16,0,0"/>
                         <TextBlock Text="Taralli"
-                FontSize="18"
-                FontWeight="Bold"
-                TextAlignment="Center"
-                VerticalAlignment="Top"
-                Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
 
                 <Button
-            Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold">
+                    Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold">
                     <Grid>
                         <Image Source="/snacks.png"
-                Height="80"
-                Stretch="Uniform"
-                VerticalAlignment="Top"
-                Margin="4,0,-4,0"/>
+                        Height="80"
+                        Stretch="Uniform"
+                        VerticalAlignment="Top"
+                        Margin="4,0,-4,0"/>
                         <TextBlock Text="Snack Choco"
-                FontSize="18"
-                FontWeight="Bold"
-                TextAlignment="Center"
-                VerticalAlignment="Top"
-                Margin="0,75,0,0"/>
+                        FontSize="18"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        VerticalAlignment="Top"
+                        Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
             </Grid>
@@ -652,6 +654,416 @@
                     </Grid>
                 </Button>
             </Grid>
+        </Grid>
+
+        <!-- DETTAGLI CAPRESE -->
+        <Grid x:Name="GridCaprese"
+              Width="720"
+              Height="1280"
+              Background="#AA000000"
+              Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/Caprese.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaCaprese"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCaprese_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+        </Grid>
+        
+        <!--DETTAGLI HAMBURGER-->
+
+        <Grid x:Name="GridHamburger"
+              Width="720"
+              Height="1280"
+              Background="#AA000000"
+              Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/Hamburger.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaHamburger"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiHamburger_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!--DETTAGLI VERDURE-->
+
+        <Grid x:Name="GridVerdure"
+              Width="720"
+              Height="1280"
+              Background="#AA000000"
+              Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/Verdure.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaVerdure"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiVerdure_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- DETTAGLI PROSCIUTTO -->
+        <Grid x:Name="GridProsciutto"
+              Width="720"
+              Height="1280"
+              Background="#AA000000"
+              Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/Prosciutto.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaProsciutto"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiProsciutto_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+        </Grid>
+
+        <!-- DETTAGLI TRAMEZZINO -->
+
+        <Grid x:Name="GridTramezzino"
+              Width="720"
+              Height="1280"
+              Background="#AA000000"
+              Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/Tramezzino.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaTramezzino"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiTramezzino_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- DETTAGLI TIRAMISU' -->
+
+        <Grid x:Name="GridTiramisu"
+              Width="720"
+              Height="1280"
+              Background="#AA000000"
+              Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/dolci.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaTiramisu"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiTiramisu_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+        </Grid>
+
+        <!-- DETTAGLI CHEESECAKE -->
+
+        <Grid x:Name="GridCheesecake"
+            Width="720"
+            Height="1280"
+            Background="#AA000000"
+            Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/dolci.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaCheesecake"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCheesecake_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <!-- DETTAGLI CIAMBELLE -->
+
+        <Grid x:Name="GridCiambelle"
+            Width="720"
+            Height="1280"
+            Background="#AA000000"
+            Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/dolci.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaCiambelle"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCiambelle_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+        </Grid>
+
+        <!-- DETTAGLI BABBA' -->
+
+        <Grid x:Name="GridBabba"
+            Width="720"
+            Height="1280"
+            Background="#AA000000"
+            Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/dolci.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaBabba"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiBabba_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
+        </Grid>
+
+        <!-- DETTAGLI MACEDONIA -->
+
+        <Grid x:Name="GridMacedonia"
+            Width="720"
+            Height="1280"
+            Background="#AA000000"
+            Visibility="Collapsed">
+
+            <Border Width="720"
+            Height="1280"
+            Background="White"
+            CornerRadius="20"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+                <StackPanel Margin="20" HorizontalAlignment="Center">
+                    <Image Source="/dolci.png"
+                    Height="150"
+                    Stretch="Uniform"
+                    Margin="0,0,0,20"/>
+
+                    <!-- Quantità -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                        <TextBlock Text="Quantità:" FontSize="18" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                        <TextBox x:Name="txtQuantitaMacedonia"
+                        Width="50"
+                        Height="30"
+                        Text="1"
+                        TextAlignment="Center"/>
+                    </StackPanel>
+
+                    <!-- Bottoni -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiMacedonia_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+
+            </Border>
         </Grid>
 
         <!--SCHERMATA D'ORDINE-->
