@@ -144,7 +144,7 @@ namespace totem_bar_project
         private void Verdure_Click(object sender, RoutedEventArgs e)
         {
             GridVerdure.Visibility = Visibility.Visible;
-            Categorie verdure = new Categorie("Verdure", 4, TipoCategoria.Panini, "Panino alle verdure", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { TipoIngredienti.Pane, TipoIngredienti.Melanzane, TipoIngredienti.Zucchine, TipoIngredienti.Insalata});
+            Categorie verdure = new Categorie("Verdure", 4, TipoCategoria.Panini, "Panino alle verdure", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { TipoIngredienti.Pane, TipoIngredienti.Melanzane, TipoIngredienti.Zucchine, TipoIngredienti.Insalata });
 
         }
         private void ChiudiVerdure_Click(object sender, RoutedEventArgs e)
@@ -184,7 +184,7 @@ namespace totem_bar_project
             GridTiramisu.Visibility = Visibility.Collapsed;
         }
 
-        
+
         private void Cheesecake_Click(object sender, RoutedEventArgs e)
         {
             GridCheesecake.Visibility = Visibility.Visible;
@@ -211,7 +211,7 @@ namespace totem_bar_project
 
         private void ChiudiMacedonia_Click(object sender, RoutedEventArgs e)
         {
-            GridMacedonia.Visibility = Visibility.Collapsed; 
+            GridMacedonia.Visibility = Visibility.Collapsed;
         }
 
         private void Babba_Click(object sender, RoutedEventArgs e)
@@ -224,7 +224,157 @@ namespace totem_bar_project
             GridBabba.Visibility = Visibility.Collapsed;
         }
 
+        private void Popcorn_Click(object sender, RoutedEventArgs e)
+        {
+            GridPopcorn.Visibility = Visibility.Visible;
+        }
 
+        private void ChiudiPopcorn_Click(object sender, RoutedEventArgs e)
+        {
+            GridPopcorn.Visibility = Visibility.Collapsed;
+        }
 
+        private void Milka_Click(object sender, RoutedEventArgs e)
+        {
+            GridMilka.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiMilka_Click(object sender, RoutedEventArgs e)
+        {
+            GridMilka.Visibility = Visibility.Collapsed;
+        }
+
+        private void Taralli_Click(object sender, RoutedEventArgs e)
+        {
+            GridTaralli.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiTaralli_Click(object sender, RoutedEventArgs e)
+        {
+            GridTaralli.Visibility = Visibility.Collapsed;
+        }
+
+        private void Crackers_Click(object sender, RoutedEventArgs e)
+        {
+            GridCrackers.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiCrackers_Click(object sender, RoutedEventArgs e)
+        {
+            GridCrackers.Visibility = Visibility.Collapsed;
+        }
+
+        private void Patatine_Click(object sender, RoutedEventArgs e)
+        {
+            GridPatatine.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiPatatine_Click(object sender, RoutedEventArgs e)
+        {
+            GridPatatine.Visibility = Visibility.Collapsed;
+        }
+
+        private void Mocaccino_Click(object sender, RoutedEventArgs e)
+        {
+            GridMocaccino.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiMocaccino_Click(object sender, RoutedEventArgs e)
+        {
+            GridMocaccino.Visibility = Visibility.Collapsed;
+        }
+
+        private void Caffe_Click(object sender, RoutedEventArgs e)
+        {
+            GridCaffe.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiCaffe_Click(object sender, RoutedEventArgs e)
+        {
+            GridCaffe.Visibility = Visibility.Collapsed;
+        }
+
+        private void The_Click(object sender, RoutedEventArgs e)
+        {
+            GridThe.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiThe_Click(object sender, RoutedEventArgs e)
+        {
+            GridThe.Visibility = Visibility.Collapsed;
+        }
+
+        private void Cappuccino_Click(object sender, RoutedEventArgs e)
+        {
+            GridCappuccino.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiCappuccino_Click(object sender, RoutedEventArgs e)
+        {
+            GridCappuccino.Visibility = Visibility.Collapsed;
+        }
+        private void Cioccolata_Click(object sender, RoutedEventArgs e)
+        {
+            GridCioccolata.Visibility = Visibility.Visible;
+        }
+        private void ChiudiCioccolata_Click(object sender, RoutedEventArgs e)
+        {
+            GridCioccolata.Visibility = Visibility.Collapsed;
+        }
+
+        private void Red_Bull_Click(object sender, RoutedEventArgs e)
+        {
+            GridRedbull.Visibility = Visibility.Visible;
+        }
+        private void ChiudiRedbull_Click(object sender, RoutedEventArgs e)
+        {
+            GridRedbull.Visibility = Visibility.Collapsed;
+        }
+        private void Coca_cola_Click(object sender, RoutedEventArgs e)
+        {
+            GridCocacola.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiCocacola_Click(object sender, RoutedEventArgs e)
+        {
+            GridCocacola.Visibility = Visibility.Collapsed;
+        }
+
+        private void Sprite_Click(object sender, RoutedEventArgs e)
+        {
+            GridSprite.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiSprite_Click(object sender, RoutedEventArgs e)
+        {
+            GridSprite.Visibility = Visibility.Collapsed;
+        }
+
+        private void Te_Click(object sender, RoutedEventArgs e)
+        {
+            GridTe.Visibility = Visibility.Visible;
+        }
+
+        private void ChiudiTe_Click(object sender, RoutedEventArgs e)
+        {
+            GridTe.Visibility = Visibility.Collapsed;
+        }
+
+        private void Fanta_Click(object sender, RoutedEventArgs e)
+        {
+            GridFanta.Visibility = Visibility.Visible;
+        }
+        private void ChiudiFanta_Click(object sender, RoutedEventArgs e)
+        {
+            GridFanta.Visibility = Visibility.Collapsed;
+        }
+        private void Monster_Click(object sender, RoutedEventArgs e)
+        {
+            GridMonster.Visibility = Visibility.Visible;
+        }
+        private void ChiudiMonster_Click(object sender, RoutedEventArgs e)
+        {
+            GridMonster.Visibility = Visibility.Collapsed;
+        }
     }
 }

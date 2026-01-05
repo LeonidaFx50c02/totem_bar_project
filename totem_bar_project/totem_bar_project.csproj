@@ -8,37 +8,69 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Babba.png" />
     <None Remove="calde.png" />
+    <None Remove="Cappuccino.png" />
     <None Remove="Caprese.png" />
+    <None Remove="Cheesecake.png" />
+    <None Remove="Ciambelle.png" />
+    <None Remove="Cioccolata.png" />
+    <None Remove="Crackers.png" />
     <None Remove="dolci.png" />
     <None Remove="fanta.png" />
     <None Remove="fredde.png" />
+    <None Remove="Hamburger.png" />
     <None Remove="Lewis_Hamilton.png" />
+    <None Remove="Limone.png" />
+    <None Remove="Macedonia.png" />
     <None Remove="Max_Verstappen.png" />
+    <None Remove="Milka.png" />
     <None Remove="panino.jpg" />
     <None Remove="panino.png" />
+    <None Remove="Patatine.png" />
+    <None Remove="Pesca.png" />
     <None Remove="Prosciutto.png" />
     <None Remove="snack.png" />
     <None Remove="snacks.png" />
+    <None Remove="Sprite.png" />
+    <None Remove="Taralli.png" />
+    <None Remove="Tiramisu.png" />
     <None Remove="Tramezzino.png" />
     <None Remove="Verdure.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Babba.png" />
     <Resource Include="calde.png" />
+    <Resource Include="Cappuccino.png" />
     <Resource Include="Caprese.png" />
+    <Resource Include="Cheesecake.png" />
+    <Resource Include="Ciambelle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Cioccolata.png" />
+    <Resource Include="Crackers.png" />
     <Resource Include="dolci.png" />
     <Resource Include="fanta.png" />
     <Resource Include="fredde.png" />
+    <Resource Include="Hamburger.png" />
     <Resource Include="Lewis_Hamilton.png" />
+    <Resource Include="Limone.png" />
+    <Resource Include="Macedonia.png" />
     <Resource Include="Max_Verstappen.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Milka.png" />
     <Resource Include="panino.jpg" />
     <Resource Include="panino.png" />
+    <Resource Include="Patatine.png" />
+    <Resource Include="Pesca.png" />
     <Resource Include="Prosciutto.png" />
     <Resource Include="snack.png" />
     <Resource Include="snacks.png" />
+    <Resource Include="Sprite.png" />
+    <Resource Include="Taralli.png" />
+    <Resource Include="Tiramisu.png" />
     <Resource Include="Tramezzino.png" />
     <Resource Include="Verdure.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
