@@ -10,63 +10,64 @@
         Width="720">
 
     <Grid x:Name="Root" Width="720" Height="1280" Margin="0,-2,0,-14">
+        <Grid.Resources>
+            <Style TargetType="Button">
+
+                <Setter Property="Background" Value="#FFF7F7F7"/>
+                <Setter Property="BorderBrush" Value="#FFCCCCCC"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Foreground" Value="#FF333333"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Cursor" Value="Hand"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border"
+                Background="#FFF7F7F7"
+                BorderBrush="#FFCCCCCC"
+                BorderThickness="1"
+                CornerRadius="20">
+                                <ContentPresenter
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+                            </Border>
+
+
+                            <ControlTemplate.Triggers>
+
+
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border"
+                        Property="Background"
+                        Value="#FFEAEAEA"/>
+                                </Trigger>
+
+
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="border"
+                        Property="Background"
+                        Value="#FFD6D6D6"/>
+                                    <Setter TargetName="border"
+                        Property="BorderBrush"
+                        Value="#FF999999"/>
+                                </Trigger>
+
+
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter TargetName="border"
+                        Property="Opacity"
+                        Value="0.5"/>
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
         <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14">
-            <Grid.Resources>
-                <Style TargetType="Button">
-
-                    <Setter Property="Background" Value="#FFF7F7F7"/>
-                    <Setter Property="BorderBrush" Value="#FFCCCCCC"/>
-                    <Setter Property="BorderThickness" Value="1"/>
-                    <Setter Property="Foreground" Value="#FF333333"/>
-                    <Setter Property="FontWeight" Value="Bold"/>
-                    <Setter Property="Cursor" Value="Hand"/>
-
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="Button">
-                                <Border x:Name="border"
-                            Background="#FFF7F7F7"
-                            BorderBrush="#FFCCCCCC"
-                            BorderThickness="1"
-                            CornerRadius="20">
-                                    <ContentPresenter
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"/>
-                                </Border>
-
-
-                                <ControlTemplate.Triggers>
-
-
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter TargetName="border"
-                                    Property="Background"
-                                    Value="#FFEAEAEA"/>
-                                    </Trigger>
-
-
-                                    <Trigger Property="IsPressed" Value="True">
-                                        <Setter TargetName="border"
-                                    Property="Background"
-                                    Value="#FFD6D6D6"/>
-                                        <Setter TargetName="border"
-                                    Property="BorderBrush"
-                                    Value="#FF999999"/>
-                                    </Trigger>
-
-
-                                    <Trigger Property="IsEnabled" Value="False">
-                                        <Setter TargetName="border"
-                                    Property="Opacity"
-                                    Value="0.5"/>
-                                    </Trigger>
-
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Grid.Resources>
             <Grid x:Name="Categorie" Margin="10,10,568,403">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="113*"/>
@@ -163,13 +164,43 @@
         Margin="10,882,10,38">
 
                 <Grid x:Name="ordine" Margin="10">
+
                     <TextBlock Text="Dettagli ordine:"
                    FontSize="28"
                    FontWeight="Bold"
                    Margin="10,0,464,292"/>
-                    <TextBlock x:Name="ordineElencoLista" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="277" Width="498" FontSize="24" FontWeight="Bold"/>
-                </Grid>
 
+                    <TextBlock x:Name="ordineElencoLista"
+                   HorizontalAlignment="Left"
+                   Margin="10,47,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Height="212"
+                   Width="624"
+                   FontSize="24"
+                   FontWeight="Bold"/>
+
+                    <Button x:Name="btnOrdina"
+                Content="Ordina"
+                Width="200"
+                Height="60"
+                FontSize="22"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="40,0,0,10" Click="btnOrdina_Click"/>
+
+                    <Button x:Name="btnAnnulla"
+                Content="Annulla ordine"
+                Width="200"
+                Height="60"
+                FontSize="22"
+                FontWeight="Bold"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,40,10"/>
+
+                </Grid>
             </Border>
 
             <!--PANINI-->
@@ -1733,9 +1764,81 @@
            HorizontalAlignment="Right" Margin="0,0,20,100" VerticalAlignment="Bottom"/>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,40">
-                <Button x:Name="ConfermaOrdine" Content="Procedi al Pagamento" Width="200" Height="60" Click="Pagamento_Click"/>
-                <Button x:Name="AnnullaOrdine" Content="Torna indietro" Width="200" Height="60" Click="back_Click"/>
+                <Button x:Name="ConfermaOrdine" Content="Procedi al Pagamento" Width="278" Height="60" Click="Pagamento_Click" FontSize="22"/>
+                <Button x:Name="AnnullaOrdine" Content="Torna indietro" Width="266" Height="60" Click="back_Click" Margin="20,0,0,0" FontSize="22"/>
             </StackPanel>
         </Grid>
-    </Grid>
+        <Grid x:Name="pagamentoSchermata" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
+            <TextBlock Text="Pagamento"
+               FontSize="36"
+               FontWeight="Bold"
+               HorizontalAlignment="Center"
+               Margin="0,30,0,0"/>
+
+            <!-- Riepilogo totale -->
+            <Border BorderBrush="Black"
+            BorderThickness="3"
+            CornerRadius="20"
+            Margin="40,120,40,920">
+
+                <Grid Margin="20">
+                    <TextBlock Text="Totale da pagare:"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       VerticalAlignment="Top"/>
+
+                    <TextBlock x:Name="totalePagamento"
+                       Text="€ 0,00"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Bottom"/>
+                </Grid>
+            </Border>
+
+            <!-- Metodo di pagamento -->
+            <TextBlock Text="Seleziona metodo di pagamento"
+               FontSize="28"
+               FontWeight="Bold"
+               HorizontalAlignment="Center"
+               Margin="0,385,0,835"/>
+
+            <!-- Pulsanti pagamento -->
+            <StackPanel Margin="0,450,0,0"
+                HorizontalAlignment="Center">
+
+                <Button x:Name="Carta_button" Content="Carta"
+                Width="300"
+                Height="80"
+                FontSize="24"
+                Margin="0,0,0,20" Click="Carta_button_Click"/>
+
+                <Button x:Name="Contanti_button" Content="Contanti"
+                Width="300"
+                Height="80"
+                FontSize="24"
+                Margin="0,0,0,20" Click="Contanti_button_Click"/>
+
+                <Button x:Name="Contactless_button" Content="Contactless"
+                Width="300"
+                Height="80"
+                FontSize="24" Click="Contactless_button_Click"/>
+            </StackPanel>
+
+            <!-- Pulsanti finali -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,40">
+
+                <Button x:Name="ConfermaPagamentoBottone" Content="Conferma pagamento" Width="240" Height="70" FontSize="22" Click="ConfermaPagamento_Click"/>
+                <Button x:Name="annullaPagamentoBottone" Content="Annulla" Width="226" Height="70" FontSize="22" Margin="20,0,0,0" Click="AnnullaPagamento_Click"/>
+            </StackPanel>
+
+        </Grid>
+        
+            <Grid x:Name="schermataCarta" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
+            </Grid>
+            <Grid x:Name="schermataContanti" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
+            </Grid>
+            <Grid x:Name="schermataContactless" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
+            </Grid>
+        </Grid>
 </Window>
