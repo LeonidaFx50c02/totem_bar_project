@@ -225,7 +225,6 @@ namespace totem_bar_project
             GridBabba.Visibility = Visibility.Collapsed;
         }
 
-<<<<<<< HEAD
         private void Popcorn_Click(object sender, RoutedEventArgs e)
         {
             GridPopcorn.Visibility = Visibility.Visible;
@@ -377,54 +376,6 @@ namespace totem_bar_project
         private void ChiudiMonster_Click(object sender, RoutedEventArgs e)
         {
             GridMonster.Visibility = Visibility.Collapsed;
-=======
-        private void btnOrdina_Click(object sender, RoutedEventArgs e)
-        {
-            MenuGrande.Visibility = Visibility.Collapsed;
-            schermataOrdine.Visibility = Visibility.Visible;
-        }
-        private void ResetBottoniPagamento()
-        {
-            Carta_button.Opacity = 1;
-            Contanti_button.Opacity = 1;
-            Contactless_button.Opacity = 1;
-        }
-
-        private void Carta_button_Click(object sender, RoutedEventArgs e)
-        {
-            ResetBottoniPagamento();
-
-            Contanti_button.Opacity = 0.6;
-            Contactless_button.Opacity = 0.6;
-            metodoPagamento = "Carta";
-        }
-
-        private void Contanti_button_Click(object sender, RoutedEventArgs e)
-        {
-            ResetBottoniPagamento();
-            Carta_button.Opacity = 0.6;
-            Contactless_button.Opacity = 0.6;
-            metodoPagamento = "Contanti";
-        }
-
-        private void Contactless_button_Click(object sender, RoutedEventArgs e)
-        {
-            ResetBottoniPagamento();
-            Carta_button.Opacity = 0.6;
-            Contanti_button.Opacity = 0.6;
-            metodoPagamento = "Contactless";
-        }
-
-        private void AnnullaPagamento_Click(object sender, RoutedEventArgs e)
-        {
-            pagamentoSchermata.Visibility = Visibility.Collapsed;
-            schermataOrdine.Visibility = Visibility.Visible;
-        }
-
-        private void ConfermaPagamento_Click(object sender, RoutedEventArgs e)
-        {
-
->>>>>>> 44efd4105d94821dbca22bb371419551a05a79ac
         }
         private void btnOrdina_Click(object sender, RoutedEventArgs e)
         {
@@ -472,9 +423,7 @@ namespace totem_bar_project
         private void ConfermaPagamento_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-    }
 
-    
-        
+        }
+    }    
     }
