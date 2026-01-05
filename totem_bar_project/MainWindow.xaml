@@ -67,7 +67,7 @@
             </Style>
         </Grid.Resources>
 
-        <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14">
+        <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
             <Grid x:Name="Categorie" Margin="10,10,568,403">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="113*"/>
@@ -1753,7 +1753,7 @@
 
         <!--SCHERMATA D'ORDINE-->
 
-        <Grid x:Name="schermataOrdine" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
+        <Grid x:Name="schermataOrdine" Width="720" Height="1280" Margin="0,-2,0,-14">
             <TextBlock Text="Riepilogo Ordine" FontSize="30" FontWeight="Bold"
            HorizontalAlignment="Center" Margin="0,20,0,1217"/>
 
