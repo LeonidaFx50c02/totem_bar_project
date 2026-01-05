@@ -21,6 +21,7 @@ namespace totem_bar_project
     public partial class MainWindow : Window
     {
         string carrello = "";
+        string metodoPagamento = "";
         public MainWindow()
         {
             InitializeComponent();
@@ -104,7 +105,8 @@ namespace totem_bar_project
 
         private void Pagamento_Click(object sender, RoutedEventArgs e)
         {
-
+            schermataOrdine.Visibility = Visibility.Collapsed;
+            pagamentoSchermata.Visibility = Visibility.Visible;
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -129,7 +131,6 @@ namespace totem_bar_project
         {
             GridHamburger.Visibility = Visibility.Visible;
             Categorie hamburger = new Categorie("Hamburger", 5, TipoCategoria.Panini, "Panino con hamburger", new List<Allergeni> { Allergeni.glutine }, new List<TipoIngredienti> { TipoIngredienti.Insalata, TipoIngredienti.Pomodoro, TipoIngredienti.Pane, TipoIngredienti.Carne, TipoIngredienti.Formaggio });
-            carrello += hamburger.GetNome();
 
         }
         private void ChiudiHamburger_Click(object sender, RoutedEventArgs e)
@@ -224,7 +225,52 @@ namespace totem_bar_project
             GridBabba.Visibility = Visibility.Collapsed;
         }
 
+        private void btnOrdina_Click(object sender, RoutedEventArgs e)
+        {
+            MenuGrande.Visibility = Visibility.Collapsed;
+            schermataOrdine.Visibility = Visibility.Visible;
+        }
+        private void ResetBottoniPagamento()
+        {
+            Carta_button.Opacity = 1;
+            Contanti_button.Opacity = 1;
+            Contactless_button.Opacity = 1;
+        }
 
+        private void Carta_button_Click(object sender, RoutedEventArgs e)
+        {
+            ResetBottoniPagamento();
 
+            Contanti_button.Opacity = 0.6;
+            Contactless_button.Opacity = 0.6;
+            metodoPagamento = "Carta";
+        }
+
+        private void Contanti_button_Click(object sender, RoutedEventArgs e)
+        {
+            ResetBottoniPagamento();
+            Carta_button.Opacity = 0.6;
+            Contactless_button.Opacity = 0.6;
+            metodoPagamento = "Contanti";
+        }
+
+        private void Contactless_button_Click(object sender, RoutedEventArgs e)
+        {
+            ResetBottoniPagamento();
+            Carta_button.Opacity = 0.6;
+            Contanti_button.Opacity = 0.6;
+            metodoPagamento = "Contactless";
+        }
+
+        private void AnnullaPagamento_Click(object sender, RoutedEventArgs e)
+        {
+            pagamentoSchermata.Visibility = Visibility.Collapsed;
+            schermataOrdine.Visibility = Visibility.Visible;
+        }
+
+        private void ConfermaPagamento_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
