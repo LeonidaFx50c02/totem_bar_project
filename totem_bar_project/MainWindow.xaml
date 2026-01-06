@@ -67,7 +67,7 @@
             </Style>
         </Grid.Resources>
 
-        <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Visible">
+        <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14">
             <Grid x:Name="Categorie" Margin="10,10,568,403">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="113*"/>
