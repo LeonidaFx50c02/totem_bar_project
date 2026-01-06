@@ -20,6 +20,7 @@ namespace totem_bar_project
     /// </summary>
     public partial class MainWindow : Window
     {
+        double totale = 0.0;
         string carrello = "";
         string metodoPagamento = "";
         public MainWindow()
@@ -425,5 +426,195 @@ namespace totem_bar_project
 
 
         }
-    }    
+
+        private void AggiungiProdottoOrdine(string nome, double prezzo, string percorsoImmagine)
+        {
+            StackPanel riga = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                Margin = new Thickness(0, 8, 0, 8)
+            };
+
+            Image img = new Image
+            {
+                Source = new BitmapImage(new Uri(percorsoImmagine, UriKind.Relative)),
+                Width = 60,
+                Height = 60,
+                Margin = new Thickness(0, 0, 15, 0)
+            };
+
+            TextBlock testo = new TextBlock
+            {
+                Text = $"{nome}  -  €{prezzo}",
+                FontSize = 24,
+                VerticalAlignment = VerticalAlignment.Center,
+                FontWeight = FontWeights.Bold
+            };
+
+            riga.Children.Add(img);
+            riga.Children.Add(testo); 
+
+            listaOrdine.Children.Add(riga);
+
+            totale += prezzo;
+            totaleOrdine.Text = "Totale: €" + totale.ToString("0.00");
+        }
+
+        private void Ordina_ClickCaprese(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Caprese", 3.50, "/Caprese.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickHamburger(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Hamburger", 5.00, "/Hamburger.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickVerdure(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Panino Verdure", 4.00, "/Verdure.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickProsciutto(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Prosciutto", 4.50, "/Prosciutto.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickTramezzino(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Tramezzino", 3.00, "/Tramezzino.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickTiramisu(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Tiramisù", 3.50, "/Tiramisu.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickCheesecake(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Cheesecake", 4.00, "/Cheesecake.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickCiambelle(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Ciambelle", 2.00, "/Ciambelle.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickBabba(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Babà", 2.50, "/Babba.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickMacedonia(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Macedonia", 2.80, "/Macedonia.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickPopcorn(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Popcorn", 1.50, "/snack.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickTaralli(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Taralli", 1.20, "/Taralli.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickMilka(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Milka", 1.80, "/Milka.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickCrackers(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Crackers", 1.00, "/Crackers.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickPatatine(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Patatine", 1.50, "/Patatine.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickMocaccino(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Mocaccino", 1.80, "/calde.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickCioccolata(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Cioccolata", 2.00, "/Cioccolata.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickCaffe(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Caffè", 1.00, "/calde.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickThe(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("The caldo", 1.20, "/calde.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickCappuccino(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Cappuccino", 1.50, "/Cappuccino.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+        private void Ordina_ClickCocacola(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Coca Cola", 1.80, "/fredde.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickFanta(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Fanta", 1.80, "/fanta.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickSprite(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Sprite", 1.80, "/Sprite.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickTe(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Tè freddo", 1.50, "/Limone.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickRedbull(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Red Bull", 2.50, "/Max_Verstappen.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+        private void Ordina_ClickMonster(object sender, RoutedEventArgs e)
+        {
+            AggiungiProdottoOrdine("Monster", 1.80, "/Monster.png");
+            GridVerdure.Visibility = Visibility.Collapsed;
+        }
+
+
     }
+}

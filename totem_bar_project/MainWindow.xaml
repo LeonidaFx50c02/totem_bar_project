@@ -715,7 +715,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCaprese" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCaprese_Click"/>
                     </StackPanel>
 
@@ -757,7 +757,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickHamburger" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiHamburger_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -797,7 +797,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickVerdure" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiVerdure_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -836,7 +836,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickProsciutto" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiProsciutto_Click"/>
                     </StackPanel>
 
@@ -878,7 +878,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickTramezzino" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiTramezzino_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -918,7 +918,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickTiramisu" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiTiramisu_Click"/>
                     </StackPanel>
 
@@ -960,7 +960,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCheesecake" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCheesecake_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -1000,7 +1000,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCiambelle" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCiambelle_Click"/>
                     </StackPanel>
 
@@ -1042,7 +1042,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickBabba" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiBabba_Click"/>
                     </StackPanel>
 
@@ -1084,7 +1084,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickMacedonia" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiMacedonia_Click"/>
                     </StackPanel>
 
@@ -1126,7 +1126,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickPopcorn" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiPopcorn_Click"/>
                     </StackPanel>
 
@@ -1168,7 +1168,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickTaralli" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiTaralli_Click"/>
                     </StackPanel>
 
@@ -1210,7 +1210,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickMilka" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiMilka_Click"/>
                     </StackPanel>
 
@@ -1252,7 +1252,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCrackers" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCrackers_Click"/>
                     </StackPanel>
 
@@ -1294,7 +1294,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickPatatine" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiPatatine_Click"/>
                     </StackPanel>
 
@@ -1336,7 +1336,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickMocaccino" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiMocaccino_Click"/>
                     </StackPanel>
 
@@ -1378,7 +1378,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCioccolata" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCioccolata_Click"/>
                     </StackPanel>
 
@@ -1420,7 +1420,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCaffe" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCaffe_Click"/>
                     </StackPanel>
 
@@ -1462,7 +1462,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickThe" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiThe_Click"/>
                     </StackPanel>
 
@@ -1504,7 +1504,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCappuccino" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCappuccino_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -1544,7 +1544,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickCocacola" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiCocacola_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -1584,7 +1584,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickFanta" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiFanta_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -1624,7 +1624,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickSprite" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiSprite_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -1664,7 +1664,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickTe" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiTe_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -1704,7 +1704,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickRedbull" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiRedbull_Click"/>
                     </StackPanel>
                 </StackPanel>
@@ -1744,7 +1744,7 @@
 
                     <!-- Bottoni -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_Click" Margin="0,0,10,0"/>
+                        <Button Content="Ordina" Width="120" Height="40" Click="Ordina_ClickMonster" Margin="0,0,10,0"/>
                         <Button Content="Chiudi" Width="120" Height="40" Click="ChiudiMonster_Click"/>
                     </StackPanel>
                 </StackPanel>
