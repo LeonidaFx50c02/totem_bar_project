@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Babba.png" />
+    <None Remove="Caffe.png" />
     <None Remove="calde.png" />
     <None Remove="Cappuccino.png" />
     <None Remove="Caprese.png" />
@@ -25,15 +26,20 @@
     <None Remove="Macedonia.png" />
     <None Remove="Max_Verstappen.png" />
     <None Remove="Milka.png" />
+    <None Remove="Mocaccino.png" />
+    <None Remove="Monster.png" />
     <None Remove="panino.jpg" />
     <None Remove="panino.png" />
     <None Remove="Patatine.png" />
     <None Remove="Pesca.png" />
+    <None Remove="Popcorn.png" />
     <None Remove="Prosciutto.png" />
+    <None Remove="RedBull.png" />
     <None Remove="snack.png" />
     <None Remove="snacks.png" />
     <None Remove="Sprite.png" />
     <None Remove="Taralli.png" />
+    <None Remove="The_caldo.png" />
     <None Remove="Tiramisu.png" />
     <None Remove="Tramezzino.png" />
     <None Remove="Verdure.png" />
@@ -41,6 +47,7 @@
 
   <ItemGroup>
     <Resource Include="Babba.png" />
+    <Resource Include="Caffe.png" />
     <Resource Include="calde.png" />
     <Resource Include="Cappuccino.png" />
     <Resource Include="Caprese.png" />
@@ -54,22 +61,23 @@
     <Resource Include="fanta.png" />
     <Resource Include="fredde.png" />
     <Resource Include="Hamburger.png" />
-    <Resource Include="Lewis_Hamilton.png" />
     <Resource Include="Limone.png" />
     <Resource Include="Macedonia.png" />
-    <Resource Include="Max_Verstappen.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Milka.png" />
+    <Resource Include="Mocaccino.png" />
+    <Resource Include="Monster.png" />
     <Resource Include="panino.jpg" />
     <Resource Include="panino.png" />
     <Resource Include="Patatine.png" />
     <Resource Include="Pesca.png" />
+    <Resource Include="Popcorn.png" />
     <Resource Include="Prosciutto.png" />
+    <Resource Include="RedBull.png" />
     <Resource Include="snack.png" />
     <Resource Include="snacks.png" />
     <Resource Include="Sprite.png" />
     <Resource Include="Taralli.png" />
+    <Resource Include="The_caldo.png" />
     <Resource Include="Tiramisu.png" />
     <Resource Include="Tramezzino.png" />
     <Resource Include="Verdure.png">
