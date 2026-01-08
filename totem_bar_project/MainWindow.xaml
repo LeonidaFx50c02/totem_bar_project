@@ -9,7 +9,7 @@
         Height="1280"
         Width="720">
 
-    <Grid x:Name="Root" Width="720" Height="1280" Margin="0,-2,0,-14">
+        <Grid x:Name="Root" Width="720" Height="1280" Margin="0,-2,0,-14" >
         <Grid.Resources>
             <Style TargetType="Button">
 
@@ -24,13 +24,13 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
                             <Border x:Name="border"
-                Background="#FFF7F7F7"
-                BorderBrush="#FFCCCCCC"
-                BorderThickness="1"
-                CornerRadius="20">
+                            Background="#FFF7F7F7"
+                            BorderBrush="#FFCCCCCC"
+                            BorderThickness="1"
+                            CornerRadius="20">
                                 <ContentPresenter
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"/>
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
                             </Border>
 
 
@@ -39,25 +39,25 @@
 
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter TargetName="border"
-                        Property="Background"
-                        Value="#FFEAEAEA"/>
+                                    Property="Background"
+                                    Value="#FFEAEAEA"/>
                                 </Trigger>
 
 
                                 <Trigger Property="IsPressed" Value="True">
                                     <Setter TargetName="border"
-                        Property="Background"
-                        Value="#FFD6D6D6"/>
+                                    Property="Background"
+                                    Value="#FFD6D6D6"/>
                                     <Setter TargetName="border"
-                        Property="BorderBrush"
-                        Value="#FF999999"/>
+                                    Property="BorderBrush"
+                                    Value="#FF999999"/>
                                 </Trigger>
 
 
                                 <Trigger Property="IsEnabled" Value="False">
                                     <Setter TargetName="border"
-                        Property="Opacity"
-                        Value="0.5"/>
+                                    Property="Opacity"
+                                    Value="0.5"/>
                                 </Trigger>
 
                             </ControlTemplate.Triggers>
@@ -67,13 +67,13 @@
             </Style>
         </Grid.Resources>
 
-        <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14">
+        <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
             <Grid x:Name="Categorie" Margin="10,10,568,403">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="113*"/>
                     <ColumnDefinition Width="29*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="paniniCatButton" Grid.Row="0" Height="134" Width="122" Margin="10,11,10,722" FontWeight="Bold" Click="paniniCatButton_Click" Grid.ColumnSpan="2">
+                <Button x:Name="paniniCatButton" Grid.Row="0" Height="134" Width="122" Margin="10,140,10,593" FontWeight="Bold" Click="paniniCatButton_Click" Grid.ColumnSpan="2">
                     <Grid>
                         <Image Source="/panino.png"
                         Height="70"
@@ -88,7 +88,7 @@
                         Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button x:Name="dolciCatButton" Height="134" Width="122" Margin="10,289,10,444" FontWeight="Bold" Click="dolciCatButton_Click" Grid.ColumnSpan="2">
+                <Button x:Name="dolciCatButton" Height="134" Width="122" Margin="10,418,10,315" FontWeight="Bold" Click="dolciCatButton_Click" Grid.ColumnSpan="2">
                     <Grid>
                         <Image Source="/dolci.png"
                         Height="70"
@@ -103,7 +103,7 @@
                                Margin="0,85,0,0"/>
                     </Grid>
                 </Button>
-                <Button x:Name="snackCatButton" Height="134" Width="122" Margin="10,150,10,583" FontWeight="Bold" Click="snackCatButton_Click" Grid.ColumnSpan="2">
+                <Button x:Name="snackCatButton" Height="134" Width="122" Margin="10,279,10,454" FontWeight="Bold" Click="snackCatButton_Click" Grid.ColumnSpan="2">
                     <Grid>
                         <Image Source="/snacks.png"
                            Height="70"
@@ -119,7 +119,7 @@
                                Margin="6,75,6,0"/>
                     </Grid>
                 </Button>
-                <Button x:Name="caldeCatButton" Height="134" Width="122" Margin="10,428,10,305" FontWeight="Bold" Click="caldeCatButton_Click" Grid.ColumnSpan="2">
+                <Button x:Name="caldeCatButton" Height="134" Width="122" Margin="10,557,10,176" FontWeight="Bold" Click="caldeCatButton_Click" Grid.ColumnSpan="2">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="51*"/>
@@ -141,7 +141,7 @@
                         Grid.ColumnSpan="2"/>
                     </Grid>
                 </Button>
-                <Button x:Name="freddeCatButton" Height="134" Width="122" FontWeight="Bold" Margin="10,567,10,166" Click="freddeCatButton_Click" Grid.ColumnSpan="2">
+                <Button x:Name="freddeCatButton" Height="134" Width="122" FontWeight="Bold" Margin="10,696,10,37" Click="freddeCatButton_Click" Grid.ColumnSpan="2">
                     <Grid>
                         <Image Source="/fredde.png"
                         Height="70"
@@ -205,7 +205,7 @@
 
             <!--PANINI-->
 
-            <Grid x:Name="prodottiPanini" Margin="157,135,10,400" Visibility="Collapsed">
+            <Grid x:Name="prodottiPanini" Margin="157,142,10,393" Visibility="Collapsed">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="139*"/>
                     <ColumnDefinition Width="414*"/>
@@ -214,7 +214,7 @@
                 <!--DIVERSE TIPOLOGIE DI PANINI-->
 
                 <Button x:Name="Hamburger1" Grid.Row="0"
-                    Width="122" Height="134" Margin="77,23,215,585" FontWeight="Bold" Grid.Column="1" Click="Hamburger1_Click">
+                    Width="122" Height="134" Margin="77,8,215,603" FontWeight="Bold" Grid.Column="1" Click="Hamburger1_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="95*"/>
@@ -234,7 +234,7 @@
                 </Button>
                 <Button x:Name="Caprese" Grid.Row="0" Grid.Column="1"
                         Width="122" Height="134"
-                        Margin="282,24,10,587" FontWeight="Bold" Click="Caprese_Click">
+                        Margin="282,8,10,603" FontWeight="Bold" Click="Caprese_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="17*"/>
@@ -253,7 +253,7 @@
                     </Grid>
                 </Button>
 
-                <Button x:Name="Verdure" Grid.Row="0" Height="134" Width="122" Margin="77,159,215,443" FontWeight="Bold" Grid.Column="1" Click="Verdure_Click">
+                <Button x:Name="Verdure" Grid.Row="0" Height="134" Width="122" Margin="77,148,215,463" FontWeight="Bold" Grid.Column="1" Click="Verdure_Click">
                     <Grid>
                         <Image Source="/Verdure.png"
                         Height="76"
@@ -267,7 +267,7 @@
                         Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button x:Name="Tramezzino" Grid.Column="0" Height="134" Width="122" Margin="10,23,7,585" FontWeight="Bold" Click="Tramezzino_Click">
+                <Button x:Name="Tramezzino" Grid.Column="0" Height="134" Width="122" Margin="10,8,7,603" FontWeight="Bold" Click="Tramezzino_Click">
                     <Grid>
                         <Image Source="/Tramezzino.png"
                         Height="76"
@@ -281,7 +281,7 @@
                         Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button x:Name="Prosciutto" Height="134" Width="122" Margin="10,159,7,443" FontWeight="Bold" Click="Prosciutto_Click">
+                <Button x:Name="Prosciutto" Height="134" Width="122" Margin="10,148,7,463" FontWeight="Bold" Click="Prosciutto_Click">
                     <Grid>
                         <Image Source="/Prosciutto.png"
                         Height="103"
@@ -300,12 +300,12 @@
 
             <!--PRODOTTI DOLCI-->
 
-            <Grid x:Name="prodottiDolci" Margin="157,150,10,403" Visibility="Collapsed">
+            <Grid x:Name="prodottiDolci" Margin="157,142,10,411" Visibility="Collapsed">
 
                 <!-- Diverse tipologie di dolci -->
 
                 <Button x:Name="Cheesecake" Grid.Row="0" Grid.Column="0"
-                Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold" Click="Cheesecake_Click">
+                Width="122" Height="134" Margin="216,8,215,585" FontWeight="Bold" Click="Cheesecake_Click">
                     <Grid>
                         <Image Source="/Cheesecake.png"
                         Height="75"
@@ -320,7 +320,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Tiramisu" Grid.Row="0"
-                    Width="122" Height="134" Margin="10,149,421,444" FontWeight="Bold" Click="Tiramisu_Click">
+                    Width="122" Height="134" Margin="10,147,421,446" FontWeight="Bold" Click="Tiramisu_Click">
                     <Grid>
                         <Image Source="/Tiramisu.png"
                         Height="80"
@@ -334,7 +334,7 @@
                         Margin="0,75,0,0"/>
                     </Grid>
                 </Button>
-                <Button x:Name="Babba" Grid.Row="0" Height="134" Margin="216,149,215,444" FontWeight="Bold" Click="Babba_Click">
+                <Button x:Name="Babba" Grid.Row="0" Height="134" Margin="216,147,215,446" FontWeight="Bold" Click="Babba_Click">
                     <Grid>
                         <Image Source="/Babba.png"
                         Height="75"
@@ -349,7 +349,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Macedonia" Grid.Column="0"
-                Width="122" Height="134" Margin="10,10,421,583" FontWeight="Bold" Click="Macedonia_Click">
+                Width="122" Height="134" Margin="10,8,421,585" FontWeight="Bold" Click="Macedonia_Click">
                     <Grid>
                         <Image Source="/Macedonia.png"
                         Height="75"
@@ -365,7 +365,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Ciambella"
-                Width="122" Height="134" Margin="421,10,10,583" FontWeight="Bold" Click="Ciambelle_Click">
+                Width="122" Height="134" Margin="421,8,10,585" FontWeight="Bold" Click="Ciambelle_Click">
                     <Grid>
                         <Image Source="/Ciambelle.png"
                     Height="80"
@@ -383,12 +383,12 @@
 
             <!--PRODOTTI SNACKS-->
 
-            <Grid x:Name="prodottiSnacks" Margin="157,150,10,403" Visibility="Collapsed">
+            <Grid x:Name="prodottiSnacks" Margin="157,142,10,411" Visibility="Collapsed">
 
                 <!--DIVERSE TIPOLOGIE DI SNACK-->
 
                 <Button x:Name="Patatine" Grid.Row="0" Grid.Column="0"
-                Width="122" Height="134" Margin="216,149,215,444" FontWeight="Bold" Click="Patatine_Click">
+                Width="122" Height="134" Margin="216,147,215,446" FontWeight="Bold" Click="Patatine_Click">
                     <Grid>
                         <Image Source="/Patatine.png"
                         Height="70"
@@ -404,7 +404,7 @@
                 </Button>
 
                 <Button x:Name="Popcorn" Grid.Row="0"
-            Width="122" Height="134" Margin="10,10,421,583" FontWeight="Bold" Click="Popcorn_Click">
+            Width="122" Height="134" Margin="10,8,421,585" FontWeight="Bold" Click="Popcorn_Click">
                     <Grid>
                         <Image Source="/Popcorn.png"
                         Height="75"
@@ -421,7 +421,7 @@
                 </Button>
 
                 <Button x:Name="Crackers" Grid.Row="0"
-            Width="122" Height="134" Margin="10,149,421,444" FontWeight="Bold" Click="Crackers_Click">
+            Width="122" Height="134" Margin="10,147,421,446" FontWeight="Bold" Click="Crackers_Click">
                     <Grid>
                         <Image Source="/Crackers.png"
                         Height="75"
@@ -438,7 +438,7 @@
                 </Button>
 
                 <Button x:Name="Taralli" Grid.Column="0"
-            Width="122" Height="134" Margin="421,10,10,583" FontWeight="Bold" Click="Taralli_Click">
+            Width="122" Height="134" Margin="421,8,10,585" FontWeight="Bold" Click="Taralli_Click">
                     <Grid>
                         <Image Source="/Taralli.png"
                         Height="65"
@@ -454,7 +454,7 @@
                 </Button>
 
                 <Button x:Name="Milka"
-                    Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold" Click="Milka_Click">
+                    Width="122" Height="134" Margin="216,8,215,585" FontWeight="Bold" Click="Milka_Click">
                     <Grid>
                         <Image Source="/Milka.png"
                         Height="94"
@@ -474,7 +474,7 @@
             <!-- Prodotti Bevande Calde -->
 
 
-            <Grid x:Name="prodottiCalde" Margin="157,150,10,403" Visibility="Collapsed">
+            <Grid x:Name="prodottiCalde" Margin="157,142,10,411" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -488,7 +488,7 @@
                 <!--TIPI DI BEVANDE CALDE-->
 
                 <Button
-                    Width="122" Height="134" Margin="10,10,421,583" FontWeight="Bold" Click="Cioccolata_Click">
+                    Width="122" Margin="10,8,421,584" FontWeight="Bold" Click="Cioccolata_Click">
                     <Grid>
                         <Image Source="/Cioccolata.png"
                         Height="97"
@@ -504,7 +504,7 @@
                 </Button>
 
                 <Button
-                    Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold" Click="Caffe_Click">
+                    Width="122" Margin="216,8,215,584" FontWeight="Bold" Click="Caffe_Click">
                     <Grid>
                         <Image Source="/Caffe.png"
                         Height="79"
@@ -520,7 +520,7 @@
                 </Button>
 
                 <Button
-                    Width="122" Height="134" Margin="421,10,10,583" FontWeight="Bold" Click="Mocaccino_Click">
+                    Width="122" Margin="421,8,10,584" FontWeight="Bold" Click="Mocaccino_Click">
                     <Grid>
                         <Image Source="/Mocaccino.png"
                         Height="75"
@@ -535,7 +535,7 @@
                     </Grid>
                 </Button>
                 <Button
-                    Width="122" Height="134" Margin="10,149,421,444" FontWeight="Bold" Click="Cappuccino_Click">
+                    Width="122" Height="134" Margin="10,147,421,446" FontWeight="Bold" Click="Cappuccino_Click">
                     <Grid>
                         <Image Source="/Cappuccino.png"
                         Height="80"
@@ -552,12 +552,12 @@
                 </Button>
 
                 <Button
-                    Width="122" Height="134" Margin="216,149,215,444" FontWeight="Bold" Click="The_Click">
+                    Width="122" Height="134" Margin="216,147,215,446" FontWeight="Bold" Click="The_Click">
                     <Grid>
                         <Image Source="/The_caldo.png"
-                        Height="100"
+                        Height="119"
                         Stretch="Uniform"
-                        VerticalAlignment="Top" Margin="-3,-13,3,0"/>
+                        VerticalAlignment="Top" Margin="0,-30,0,0"/>
                         <TextBlock Text="Thè"
                         FontSize="18"
                         FontWeight="Bold"
@@ -569,7 +569,7 @@
             </Grid>
 
             <!-- Prodotti Bevande Fredde -->
-            <Grid x:Name="prodottiFredde" Margin="157,150,10,405" Visibility="Visible">
+            <Grid x:Name="prodottiFredde" Margin="157,142,10,413" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
@@ -583,7 +583,7 @@
                 <!--TIPI DI BEVANDE FREDDE-->
 
                 <Button x:Name="Coca_cola"
-                    Width="122" Height="134" Margin="10,10,421,583" FontWeight="Bold" Click="Coca_cola_Click">
+                    Width="122" Height="134" Margin="10,8,421,585" FontWeight="Bold" Click="Coca_cola_Click">
                     <Grid>
                         <Image Source="/fredde.png"
                         Height="80"
@@ -599,7 +599,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Te"
-                    Width="122" Height="134" Margin="216,10,215,583" FontWeight="Bold" Click="Te_Click">
+                    Width="122" Height="134" Margin="216,8,215,585" FontWeight="Bold" Click="Te_Click">
                     <Grid>
                         <Image Source="/Limone.png"
                         Height="80"
@@ -614,7 +614,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Fanta"
-                    Width="122" Height="134" Margin="421,10,10,583" FontWeight="Bold" Click="Fanta_Click">
+                    Width="122" Height="134" Margin="421,8,10,585" FontWeight="Bold" Click="Fanta_Click">
                     <Grid>
                         <Image Source="/fanta.png"
                         Height="80"
@@ -629,7 +629,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Sprite"
-                    Width="122" Height="134" Margin="10,149,421,444" FontWeight="Bold" Click="Sprite_Click">
+                    Width="122" Height="134" Margin="10,147,421,446" FontWeight="Bold" Click="Sprite_Click">
                     <Grid>
                         <Image Source="/Sprite.png"
                         Height="80"
@@ -644,7 +644,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Red_Bull"
-                    Width="122" Height="134" Margin="216,149,215,444" FontWeight="Bold" Click="Red_Bull_Click">
+                    Width="122" Height="134" Margin="216,147,215,446" FontWeight="Bold" Click="Red_Bull_Click">
                     <Grid>
                         <Image Source="/RedBull.png"
                         Height="80"
@@ -660,7 +660,7 @@
                     </Grid>
                 </Button>
                 <Button x:Name="Monster"
-                    Width="122" Height="134" Margin="421,149,10,444" FontWeight="Bold" Click="Monster_Click">
+                    Width="122" Height="134" Margin="421,147,10,446" FontWeight="Bold" Click="Monster_Click">
                     <Grid>
                         <Image Source="/Monster.png"
                         Height="75"
