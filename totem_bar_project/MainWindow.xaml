@@ -25,13 +25,13 @@
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
                                 <Border x:Name="border"
-                        Background="#FFF7F7F7"
-                        BorderBrush="#FFCCCCCC"
-                        BorderThickness="1"
-                        CornerRadius="20">
+                                Background="#FFF7F7F7"
+                                BorderBrush="#FFCCCCCC"
+                                BorderThickness="1"
+                                CornerRadius="20">
                                     <ContentPresenter
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"/>
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"/>
                                 </Border>
 
                                 <ControlTemplate.Triggers>
@@ -39,18 +39,18 @@
 
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter TargetName="border"
-                                Property="Background"
-                                Value="#FFEAEAEA"/>
+                                        Property="Background"
+                                        Value="#FFEAEAEA"/>
                                     </Trigger>
 
 
                                     <Trigger Property="IsPressed" Value="True">
                                         <Setter TargetName="border"
-                                Property="Background"
-                                Value="#FFD6D6D6"/>
+                                    Property="Background"
+                                    Value="#FFD6D6D6"/>
                                         <Setter TargetName="border"
-                                Property="BorderBrush"
-                                Value="#FF999999"/>
+                                    Property="BorderBrush"
+                                    Value="#FF999999"/>
                                     </Trigger>
 
 
@@ -67,30 +67,30 @@
                 </Style>
             </Grid.Resources>
 
-            <!--<Image Source="/logo.png" 
-    Height="300" 
-    VerticalAlignment="Top" 
-    Margin="0,100,0,0" 
-    Stretch="Uniform"/>-->
+            <Image Source="/Logo.png" 
+            Height="446" 
+            VerticalAlignment="Top" 
+            Margin="48,10,48,0" 
+            Stretch="Uniform"/>
 
             <!-- Titolo -->
             <TextBlock Text="Benvenuto al Bar dello Jean Monnet!" 
-    FontSize="36" 
-    FontWeight="Bold" 
-    HorizontalAlignment="Center" 
-    VerticalAlignment="Top" 
-    Margin="0,591,0,0" Width="630"/>
+            FontSize="36" 
+            FontWeight="Bold" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,456,0,0" Width="630"/>
 
             <!-- Bottone per accedere ai Panini -->
             <Button x:Name="button_menu" Content="Vai ai Prodotti!" 
-    Width="250" 
-    Height="80" 
-    FontSize="24" 
-    FontWeight="Bold" 
-    HorizontalAlignment="Center" 
-    VerticalAlignment="Top" 
-    Margin="0,701,0,0"
-    Click="BtnVaiPanini_Click"/>
+            Width="250" 
+            Height="80" 
+            FontSize="24" 
+            FontWeight="Bold" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,590,0,0"
+            Click="BtnVaiPanini_Click"/>
 
 
             <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">

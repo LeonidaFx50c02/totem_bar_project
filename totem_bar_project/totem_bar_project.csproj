@@ -23,6 +23,7 @@
     <None Remove="Hamburger.png" />
     <None Remove="Lewis_Hamilton.png" />
     <None Remove="Limone.png" />
+    <None Remove="Logo.png" />
     <None Remove="Macedonia.png" />
     <None Remove="Max_Verstappen.png" />
     <None Remove="Milka.png" />
@@ -62,6 +63,7 @@
     <Resource Include="fredde.png" />
     <Resource Include="Hamburger.png" />
     <Resource Include="Limone.png" />
+    <Resource Include="Logo.png" />
     <Resource Include="Macedonia.png" />
     <Resource Include="Milka.png" />
     <Resource Include="Mocaccino.png" />
