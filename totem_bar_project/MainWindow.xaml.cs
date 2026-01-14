@@ -616,6 +616,10 @@ namespace totem_bar_project
             GridMonster.Visibility = Visibility.Collapsed;
         }
 
-
+        private void BtnVaiPanini_Click(object sender, RoutedEventArgs e)
+        {
+            Schermata_principale.Visibility = Visibility.Collapsed;
+            MenuGrande.Visibility = Visibility.Visible;
+        }
     }
 }
