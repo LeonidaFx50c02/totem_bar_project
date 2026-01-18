@@ -10,7 +10,7 @@
         Width="720">
 
     <Grid>
-        <Grid x:Name="Schermata_principale" Width="720" Height="1280" Margin="0,-2,0,-14" >
+        <Grid x:Name="Root" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" >
             <Grid.Resources>
                 <Style TargetType="Button">
 
@@ -67,22 +67,23 @@
                 </Style>
             </Grid.Resources>
 
-            <Image Source="/Logo.png" 
+            <Grid x:Name="SfondoMenu" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" Visibility="Visible" >
+                <Image Source="/Logo.png" 
             Height="446" 
             VerticalAlignment="Top" 
             Margin="48,10,48,0" 
             Stretch="Uniform"/>
 
-            <!-- Titolo -->
-            <TextBlock Text="Benvenuto al Bar dello Jean Monnet!" 
+                <!-- Titolo -->
+                <TextBlock Text="Benvenuto al Bar dello Jean Monnet!" 
             FontSize="36" 
             FontWeight="Bold" 
             HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
             Margin="0,456,0,0" Width="630"/>
 
-            <!-- Bottone per accedere ai Panini -->
-            <Button x:Name="button_menu" Content="Vai ai Prodotti!" 
+                <!-- Bottone per accedere ai Panini -->
+                <Button x:Name="button_menu" Content="Vai ai Prodotti!" 
             Width="250" 
             Height="80" 
             FontSize="24" 
@@ -91,9 +92,9 @@
             VerticalAlignment="Top" 
             Margin="0,590,0,0"
             Click="BtnVaiPanini_Click"/>
+            </Grid>
 
-
-            <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
+            <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed" Background="#FF36E6ED">
                 <Grid x:Name="Categorie" Margin="10,10,568,403">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="113*"/>
@@ -231,7 +232,7 @@
 
                 <!--PANINI-->
 
-                <Grid x:Name="prodottiPanini" Margin="157,142,10,393" Visibility="Collapsed">
+                <Grid x:Name="prodottiPanini" Margin="157,142,10,393" Visibility="Collapsed" Background="#FF36E6ED">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="139*"/>
                         <ColumnDefinition Width="414*"/>
@@ -500,7 +501,7 @@
                 <!-- Prodotti Bevande Calde -->
 
 
-                <Grid x:Name="prodottiCalde" Margin="157,142,10,411" Visibility="Collapsed">
+                <Grid x:Name="prodottiCalde" Margin="157,142,10,411" Visibility="Collapsed" Background="#FF36E6ED">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -750,12 +751,12 @@
         <Grid x:Name="GridHamburger"
               Width="720"
               Height="1280"
-              Background="#AA000000"
+              Background="#FF36E6ED"              
               Visibility="Collapsed">
 
             <Border Width="720"
             Height="1280"
-            Background="White"
+            Background="#FF36E6ED"
             CornerRadius="20"
             HorizontalAlignment="Center"
             VerticalAlignment="Center">

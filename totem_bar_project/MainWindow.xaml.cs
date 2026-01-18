@@ -618,7 +618,7 @@ namespace totem_bar_project
 
         private void BtnVaiPanini_Click(object sender, RoutedEventArgs e)
         {
-            Schermata_principale.Visibility = Visibility.Collapsed;
+            SfondoMenu.Visibility = Visibility.Collapsed;
             MenuGrande.Visibility = Visibility.Visible;
         }
     }
