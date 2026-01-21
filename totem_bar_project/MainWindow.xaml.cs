@@ -621,5 +621,11 @@ namespace totem_bar_project
             SfondoMenu.Visibility = Visibility.Collapsed;
             MenuGrande.Visibility = Visibility.Visible;
         }
+
+        private void btnAnnulla_Click(object sender, RoutedEventArgs e)
+        {
+            MenuGrande.Visibility = Visibility.Collapsed;
+            SfondoMenu.Visibility = Visibility.Visible;
+        }
     }
 }
