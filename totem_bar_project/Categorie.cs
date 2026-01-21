@@ -29,8 +29,8 @@ namespace totem_bar_project
             this.ingredienti = ingredienti;
         }
         public List<Allergeni> GetAllergeni()
-        { 
-            return allergeni; 
+        {
+            return allergeni;
         }
 
         public string GetNome()
@@ -50,18 +50,13 @@ namespace totem_bar_project
         {
             return prezzo;
         }
-       public TipoIngredienti GetIngrediente()
-       {
-            //da vedere!!
-            return 0;
-       }
         public void SetCategoria(TipoCategoria categoria)
-        { 
-            this.categoria = categoria; 
+        {
+            this.categoria = categoria;
         }
         public TipoCategoria GetCategoria()
-        { 
-            return categoria; 
+        {
+            return categoria;
         }
         public void SetNome(string nome)
         {

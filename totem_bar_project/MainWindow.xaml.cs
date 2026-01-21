@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using System.Diagnostics;
+
 
 namespace totem_bar_project
 {
@@ -31,6 +34,7 @@ namespace totem_bar_project
 
         private void inizializzaProdotti()
         {
+            List<Categorie> ordineCorrente = new List<Categorie>();
 
             Categorie cheesecake = new Categorie("Cheesecake", 4, TipoCategoria.Dolci, "Cheesecake", new List<Allergeni> { Allergeni.latte, Allergeni.uova }, new List<TipoIngredienti> { });
             Categorie tiramisu = new Categorie("Tiramisù", 4, TipoCategoria.Dolci, "Tiramisù", new List<Allergeni> { Allergeni.latte, Allergeni.uova }, new List<TipoIngredienti> { });
@@ -423,8 +427,31 @@ namespace totem_bar_project
 
         private void ConfermaPagamento_Click(object sender, RoutedEventArgs e)
         {
+            if (listaOrdine.Children.Count == 0)
+            {
+                MessageBox.Show("Nessun prodotto nell'ordine!");
+                return;
+            }
 
+            if (string.IsNullOrEmpty(metodoPagamento))
+            {
+                MessageBox.Show("Seleziona un metodo di pagamento!");
+                return;
+            }
 
+            SalvaScontrino();
+
+            MessageBox.Show("Pagamento completato!\nScontrino salvato nei Documenti.");
+
+            // RESET ORDINE
+            listaOrdine.Children.Clear();
+            totale = 0;
+            totaleOrdine.Text = "Totale: €0.00";
+            totalePagamento.Text = "0.00€";
+            metodoPagamento = "";
+
+            pagamentoSchermata.Visibility = Visibility.Collapsed;
+            MenuGrande.Visibility = Visibility.Visible;
         }
 
         private void AggiungiProdottoOrdine(string nome, double prezzo, string percorsoImmagine)
@@ -621,11 +648,80 @@ namespace totem_bar_project
             SfondoMenu.Visibility = Visibility.Collapsed;
             MenuGrande.Visibility = Visibility.Visible;
         }
+        
+        private void scontrini_button_Click(object sender, RoutedEventArgs e)
+        {
+            string cartella = System.IO.Path.Combine(
+           Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+           "ScontriniTotem");
+
+            if (!Directory.Exists(cartella))
+            {
+                MessageBox.Show("Nessuno scontrino trovato.");
+                return;
+            }
+
+            Process.Start("explorer.exe", cartella);
+        }
+
 
         private void btnAnnulla_Click(object sender, RoutedEventArgs e)
         {
             MenuGrande.Visibility = Visibility.Collapsed;
             SfondoMenu.Visibility = Visibility.Visible;
         }
+
+        private void annullaPagamentoBottone_Click(object sender, RoutedEventArgs e)
+        {
+            listaOrdine.Children.Clear();
+            totale = 0;
+            totaleOrdine.Text = "Totale: €0.00";
+            totalePagamento.Text = "0.00€";
+        }
+
+        private void SalvaScontrino()
+        {
+            string cartella = System.IO.Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                "ScontriniTotem"
+            );
+
+            if (!Directory.Exists(cartella))
+                Directory.CreateDirectory(cartella);
+
+            string nomeFile = $"scontrino_{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.txt";
+            string percorso = System.IO.Path.Combine(cartella, nomeFile);
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("BAR JEAN MONNET");
+            sb.AppendLine("Via Santa Caterina da Siena, 3, 22066 Mariano Comense CO");
+            sb.AppendLine("----------------------------");
+            sb.AppendLine($"Data: {DateTime.Now}"); 
+            sb.AppendLine($"Pagamento: {metodoPagamento}");
+            sb.AppendLine("");
+            sb.AppendLine("PRODOTTI:");
+
+            foreach (StackPanel riga in listaOrdine.Children)
+            {
+                foreach (var elemento in riga.Children)
+                {
+                    if (elemento is TextBlock testo)
+                    {
+                        sb.AppendLine("- " + testo.Text);
+                    }
+                }
+            }
+
+            sb.AppendLine("");
+            sb.AppendLine("----------------------------");
+            sb.AppendLine($"TOTALE: €{totale:0.00}");
+            sb.AppendLine("IVA INCLUSA");
+            sb.AppendLine("");
+            sb.AppendLine("Grazie per l'acquisto!");
+
+            File.WriteAllText(percorso, sb.ToString());
+        }
+
     }
 }
