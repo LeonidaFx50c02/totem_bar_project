@@ -1881,13 +1881,6 @@
                 </StackPanel>
 
             </Grid>
-
-            <Grid x:Name="schermataCarta" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
-            </Grid>
-            <Grid x:Name="schermataContanti" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
-            </Grid>
-            <Grid x:Name="schermataContactless" Width="720" Height="1280" Margin="0,-2,0,-14" Visibility="Collapsed">
-            </Grid>
         </Grid>
     </Viewbox>
 </Window>
