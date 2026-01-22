@@ -701,8 +701,10 @@ namespace totem_bar_project
                         Cursor = Cursors.Hand
                     };
 
-                    string imgPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "scontrini.png");
+                    //string imgPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "scontrini.png");
+                    string projectRoot = System.IO.Path.GetFullPath(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"..", "..", ".."));
 
+                    string imgPath = System.IO.Path.Combine(projectRoot, "scontrini.png");
                     Image img = new Image
                     {
                         Source = new BitmapImage(new Uri(imgPath, UriKind.Absolute)),
