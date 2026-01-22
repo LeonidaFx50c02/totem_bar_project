@@ -9,65 +9,67 @@
         Height="1280"
         Width="720">
     <Viewbox Stretch="Uniform">
+        
         <Grid>
+            <Grid.Resources>
+                <Style TargetType="Button">
+
+                    <Setter Property="Background" Value="#FFF7F7F7"/>
+                    <Setter Property="BorderBrush" Value="#FFCCCCCC"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Foreground" Value="#FF333333"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="border"
+                        Background="#FFF7F7F7"
+                        BorderBrush="#FFCCCCCC"
+                        BorderThickness="1"
+                        CornerRadius="20">
+                                    <ContentPresenter
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                                </Border>
+
+                                <ControlTemplate.Triggers>
+
+
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="border"
+                                Property="Background"
+                                Value="#FFEAEAEA"/>
+                                    </Trigger>
+
+
+                                    <Trigger Property="IsPressed" Value="True">
+                                        <Setter TargetName="border"
+                            Property="Background"
+                            Value="#FFD6D6D6"/>
+                                        <Setter TargetName="border"
+                            Property="BorderBrush"
+                            Value="#FF999999"/>
+                                    </Trigger>
+
+
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter TargetName="border"
+                            Property="Opacity"
+                            Value="0.5"/>
+                                    </Trigger>
+
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
             <Grid x:Name="Root" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" >
-                <Grid.Resources>
-                    <Style TargetType="Button">
-
-                        <Setter Property="Background" Value="#FFF7F7F7"/>
-                        <Setter Property="BorderBrush" Value="#FFCCCCCC"/>
-                        <Setter Property="BorderThickness" Value="1"/>
-                        <Setter Property="Foreground" Value="#FF333333"/>
-                        <Setter Property="FontWeight" Value="Bold"/>
-                        <Setter Property="Cursor" Value="Hand"/>
-
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="Button">
-                                    <Border x:Name="border"
-                                        Background="#FFF7F7F7"
-                                        BorderBrush="#FFCCCCCC"
-                                        BorderThickness="1"
-                                        CornerRadius="20">
-                                        <ContentPresenter
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"/>
-                                    </Border>
-
-                                    <ControlTemplate.Triggers>
-
-
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="border"
-                                                Property="Background"
-                                                Value="#FFEAEAEA"/>
-                                        </Trigger>
-
-
-                                        <Trigger Property="IsPressed" Value="True">
-                                            <Setter TargetName="border"
-                                            Property="Background"
-                                            Value="#FFD6D6D6"/>
-                                            <Setter TargetName="border"
-                                            Property="BorderBrush"
-                                            Value="#FF999999"/>
-                                        </Trigger>
-
-
-                                        <Trigger Property="IsEnabled" Value="False">
-                                            <Setter TargetName="border"
-                                            Property="Opacity"
-                                            Value="0.5"/>
-                                        </Trigger>
-
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </Grid.Resources>
-
-                <Grid x:Name="SfondoMenu" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" Visibility="Visible" >
+                
+                
+                <Grid x:Name="SfondoMenu" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" >
                     <Image Source="/Logo.png" 
                     Height="446" 
                     VerticalAlignment="Top" 
@@ -102,7 +104,11 @@
                     Margin="425,1166,0,0"
                     Click="scontrini_button_Click"/>
                 </Grid>
-                
+
+                <Grid x:Name="SchermataScontrini" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" Visibility="Collapsed">
+                    <StackPanel x:Name="listaScontrini" Margin="20,100,20,137">
+                    </StackPanel>
+                </Grid>
                 <!-- CONTENITORE MENU-->
                 <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" Visibility="Collapsed">
                     <Grid x:Name="Categorie" Margin="10,10,568,403">
@@ -235,7 +241,7 @@
                             FontWeight="Bold"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"
-                            Margin="0,0,40,10" Click="annullaPagamentoBottone_Click"/>
+                            Margin="0,0,40,10" Click="btnAnnulla_Click"/>
 
                         </Grid>
                     </Border>

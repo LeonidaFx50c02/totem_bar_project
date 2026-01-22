@@ -648,12 +648,15 @@ namespace totem_bar_project
             SfondoMenu.Visibility = Visibility.Collapsed;
             MenuGrande.Visibility = Visibility.Visible;
         }
-        
+
         private void scontrini_button_Click(object sender, RoutedEventArgs e)
         {
-            string cartella = System.IO.Path.Combine(
-           Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-           "ScontriniTotem");
+            SchermataScontrini.Visibility = Visibility.Visible;
+            SfondoMenu.Visibility = Visibility.Collapsed;
+            /*string cartella = System.IO.Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "ScontriniTotem"
+            );
 
             if (!Directory.Exists(cartella))
             {
@@ -661,8 +664,81 @@ namespace totem_bar_project
                 return;
             }
 
-            Process.Start("explorer.exe", cartella);
+            Process.Start("explorer.exe", cartella);*/
+            try
+            {
+
+
+                string cartella = System.IO.Path.Combine(
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "ScontriniTotem"
+                );
+
+                if (!Directory.Exists(cartella))
+                {
+                    MessageBox.Show("Nessuno scontrino trovato.");
+                    return;
+                }
+
+                listaScontrini.Children.Clear();
+
+                string[] files = Directory.GetFiles(cartella, "*.txt");
+
+                if (files.Length == 0)
+                {
+                    MessageBox.Show("Nessuno scontrino trovato.");
+                    return;
+                }
+
+                foreach (string file in files)
+                {
+                    string nome = System.IO.Path.GetFileName(file);
+
+                    StackPanel riga = new StackPanel
+                    {
+                        Orientation = Orientation.Horizontal,
+                        Margin = new Thickness(0, 8, 0, 8),
+                        Cursor = Cursors.Hand
+                    };
+
+                    string imgPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "scontrini.png");
+
+                    Image img = new Image
+                    {
+                        Source = new BitmapImage(new Uri(imgPath, UriKind.Absolute)),
+                        Width = 60,
+                        Height = 60,
+                        Margin = new Thickness(0, 0, 15, 0)
+                    };
+
+                    TextBlock testo = new TextBlock
+                    {
+                        Text = nome,
+                        FontSize = 24,
+                        VerticalAlignment = VerticalAlignment.Center,
+                        FontWeight = FontWeights.Bold
+                    };
+
+                    riga.Children.Add(img);
+                    riga.Children.Add(testo);
+
+                    riga.MouseLeftButtonUp += (s, ev) =>
+                    {
+                        string contenuto = File.ReadAllText(file);
+                        MessageBox.Show(contenuto, nome);
+                    };
+
+                    listaScontrini.Children.Add(riga);
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Errore durante il caricamento degli scontrini: " + ex.Message);
+            }
         }
+
 
 
         private void btnAnnulla_Click(object sender, RoutedEventArgs e)
@@ -677,12 +753,14 @@ namespace totem_bar_project
             totale = 0;
             totaleOrdine.Text = "Totale: €0.00";
             totalePagamento.Text = "0.00€";
+            SfondoMenu.Visibility = Visibility.Visible;
+
         }
 
         private void SalvaScontrino()
         {
             string cartella = System.IO.Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                AppDomain.CurrentDomain.BaseDirectory,
                 "ScontriniTotem"
             );
 
@@ -697,7 +775,7 @@ namespace totem_bar_project
             sb.AppendLine("BAR JEAN MONNET");
             sb.AppendLine("Via Santa Caterina da Siena, 3, 22066 Mariano Comense CO");
             sb.AppendLine("----------------------------");
-            sb.AppendLine($"Data: {DateTime.Now}"); 
+            sb.AppendLine($"Data: {DateTime.Now}");
             sb.AppendLine($"Pagamento: {metodoPagamento}");
             sb.AppendLine("");
             sb.AppendLine("PRODOTTI:");
@@ -722,6 +800,5 @@ namespace totem_bar_project
 
             File.WriteAllText(percorso, sb.ToString());
         }
-
     }
 }
