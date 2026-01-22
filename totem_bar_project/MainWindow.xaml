@@ -108,6 +108,15 @@
                 <Grid x:Name="SchermataScontrini" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" Visibility="Collapsed">
                     <StackPanel x:Name="listaScontrini" Margin="20,100,20,137">
                     </StackPanel>
+                    <Button x:Name="indietro_btn" Content="torna indietro" 
+                        Width="250" 
+                        Height="80" 
+                        FontSize="24" 
+                        FontWeight="Bold" 
+                        HorizontalAlignment="Left" 
+                        VerticalAlignment="Top" 
+                        Margin="425,1166,0,0"
+                        Click="indietro_btn_click"/>
                 </Grid>
                 <!-- CONTENITORE MENU-->
                 <Grid x:Name="MenuGrande" Width="720" Height="1280" Margin="0,-2,0,-14" Background="#FF36E6ED" Visibility="Collapsed">

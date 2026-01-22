@@ -441,7 +441,7 @@ namespace totem_bar_project
 
             SalvaScontrino();
 
-            MessageBox.Show("Pagamento completato!\nScontrino salvato nei Documenti.");
+            MessageBox.Show("Pagamento completato!\nScontrino salvato.");
 
             // RESET ORDINE
             listaOrdine.Children.Clear();
@@ -745,6 +745,10 @@ namespace totem_bar_project
         {
             MenuGrande.Visibility = Visibility.Collapsed;
             SfondoMenu.Visibility = Visibility.Visible;
+            listaOrdine.Children.Clear();
+            totale = 0;
+            totaleOrdine.Text = "Totale: €0.00";
+            totalePagamento.Text = "0.00€";
         }
 
         private void annullaPagamentoBottone_Click(object sender, RoutedEventArgs e)
@@ -799,6 +803,12 @@ namespace totem_bar_project
             sb.AppendLine("Grazie per l'acquisto!");
 
             File.WriteAllText(percorso, sb.ToString());
+        }
+
+        private void indietro_btn_click(object sender, RoutedEventArgs e)
+        {
+            SchermataScontrini.Visibility = Visibility.Collapsed;
+            SfondoMenu.Visibility = Visibility.Visible;
         }
     }
 }
